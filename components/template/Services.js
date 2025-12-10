@@ -248,7 +248,7 @@ function Services() {
               <div>
                 <Image
                   className="img-border"
-                  src="/images/urbanwastewater.png"
+                  src="/images/urbanwastewater.jpg"
                   alt="Logo"
                   width={100}
                   height={100}
@@ -294,7 +294,7 @@ function Services() {
               <div>
                 <Image
                   className="img-border"
-                  src="/images/Industrial.jfif"
+                  src="/images/Industrial.jpg"
                   alt="Logo"
                   width={100}
                   height={100}
