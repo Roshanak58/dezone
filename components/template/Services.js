@@ -126,8 +126,8 @@ function Services() {
   const drinkwClick = () => {
     router.push("./services/DrinkingWaterPurification");
   };
-   const supplyerClick = () => {
-     setSupply(1);
+  const supplyerClick = () => {
+    setSupply(1);
     setWwtreatment(0);
     setWtreatment(0);
     setPstation(0);
@@ -151,7 +151,9 @@ function Services() {
             width={130}
             height={130}
           />
-          <button onClick={() =>supplyerClick()}>تأمین قطعات از سازندگان خارجی</button>
+          <button onClick={() => supplyerClick()}>
+            تأمین قطعات از سازندگان خارجی
+          </button>
         </div>
         <div className={`service ${active === 1 ? "active" : "inactive"}`}>
           <Image
