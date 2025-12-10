@@ -146,7 +146,7 @@ function Services() {
         <div className={`service ${active === 9 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
-            src="/images/supplyer.jfif"
+            src="/images/supplyer.jpg"
             alt="Logo"
             width={130}
             height={130}
@@ -217,7 +217,7 @@ function Services() {
         <div className={`service ${active === 8 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
-            src="/images/operation.jfif"
+            src="/images/operation.jpg"
             alt="Logo"
             width={120}
             height={130}
