@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+.item {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.item img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* عکس که خارج می‌شود */
+.fadeOut {
+  opacity: 0;
+}
+
+/* عکس جدید که وارد می‌شود */
+.fadeIn {
+  opacity: 0;
+  animation: fadeInEffect 5s forwards;
+}
+
+@keyframes fadeInEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

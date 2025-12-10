@@ -1,33 +1,20 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@font-face {
+  font-family: 'B Nazanin';
+  src: url('/fonts/BNazanin.woff2') format('woff2'),
+       url('/fonts/BNazanin.woff') format('woff'),
+       url('/fonts/BNazanin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
+  
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, 'B Nazanin';
+  direction: rtl; /* اگر زبان فارسی است */
 }
 
 a {
@@ -35,8 +22,1265 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* 
+header {
+font-family:'B Nazanin';
+display: flex;
+  justify-content: space-between;
+  align-items: center; این خط باعث هم‌ترازی عمودی می‌شود
+  padding: 10px 20px;
+  direction: rtl;
+
+  background-color: #4e75a3;
+  height: 100px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 10px;
+  display: flex;
+  
+} */
+.header {
+  direction: rtl;
+  background: #4e75a3;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 130px;
+  flex-wrap: wrap; /* برای ریسپانسیو */
+}
+
+/* ----- بخش راست ----- */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box  {
+  border-radius: 6px;
+}
+
+.site-info h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+  text-align: right;
+}
+
+.site-info p {
+  margin: 2px 0;
+  color: #e8eff7;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* ----- خطوط عمودی ----- */
+.vertical-lines {
+  
+  display: flex;
+  gap: 2px; /* فاصله بین خطوط */
+  align-items: center;
+}
+
+.vertical-lines span {
+  width: 1px;
+  height: 110px;
+  background: #fff;
+  display: block;
+}
+
+/* ----- منو وسط ----- */
+.center-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+/* ----- بخش چپ ----- */
+.left-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; /* برای اینکه search-area سمت چپ باشد */
+}
+
+/* باکس جستجو */
+.search-area {
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  /* background: rgba(255, 255, 255, 0.1); */
+}
+
+.search-input {
+  width: 200px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+  font-family: 'B Nazanin';
+}
+
+.search-btn {
+  background: #4e75a3;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+/* ----- ریسپانسیو ----- */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .center-section {
+    order: 3; /* منو بعد از خطوط */
+  }
+
+  .vertical-lines {
+    order: 2;
+  }
+
+  .right-section,
+  .left-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .left-section {
+    align-items: flex-end;
   }
 }
+
+@media (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+
+  .site-info h3 {
+    font-size: 18px;
+  }
+
+  .site-info p {
+    font-size: 12px;
+  }
+
+  .vertical-lines span {
+    height: 50px;
+  }
+
+  .search-area {
+    padding: 5px 8px;
+  }
+}
+
+/* منو */
+.menuBox {
+  background: #355674;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+header > * {
+  margin: 0 10px;
+}
+
+
+.headerDiv p {
+  margin: 0;
+}
+header button {
+  background-color: #355674;
+  border: 1px solid #fff;
+  height: fit-content;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+}
+
+header button svg {
+  margin-left: 10px;
+}
+footer {
+    background-color: #b3c5da;
+  height: 50px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+
+}
+footer p {
+  text-align: center;
+   margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+.lineHeader{
+  margin-right: 30px;
+   height: 150px;
+   top: 0px;
+   position: fixed;
+}
+.container{
+    overflow: visible !important;
+  max-height: auto;
+  font-family:'B Nazanin';
+  direction: rtl;
+}
+.headerRight{
+   align-items: stretch
+}
+.container--main {
+   display: flex;
+  
+  align-items: stretch; /* 👈 باعث می‌شود تمام فرزندان ارتفاع برابر با هم بگیرند */
+    height: auto;
+  position: relative;
+  min-height: calc(100vh - 150px);
+}
+
+aside {
+  /* padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  background-color: #4e75a3;
+  width: 200px;
+  position:static;
+  margin: 50px 0 0 0; */
+  /* bottom: 80px; */
+  /* border-top-left-radius: 20px;
+  color: #fff;
+  padding: 30px 0 0 30px;
+  padding: 10px 20px;
+  text-align: right;
+  flex-grow: 1; */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  background-color: #4e75a3;
+  width: 200px;
+  border-top-left-radius: 20px;
+  color: #fff;
+  position: relative;
+  top: -20px; /* 👈 این خط باعث می‌شود 10px بالاتر بیاید و روی هدر بیفتد */
+  z-index: 2; /* برای اینکه روی هدر دیده شود */
+  margin: 0;
+  padding-top: 20px;
+   text-align: right; /* کل متن‌های داخل aside راست‌چین شوند */
+  direction: rtl;
+}
+aside p {
+  color: #494a52;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* aside li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: F4F5FA;
+  right: 5px;
+  margin: 15px 0;
+  display: flex;
+  text-align: right;
+  align-items:center;
+} */
+ aside ul {
+  align-items: stretch;
+  
+  margin: 0;
+  padding: 0 ;
+}
+
+aside li {
+   line-height: 1;
+   /* justify-content: space-between; */
+  direction: rtl;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 15px 0;
+  color: #F4F5FA;
+  display: flex;
+ text-align: right;  
+  justify-content: flex-end; /* اگر display:flex باشد، محتوا به راست می‌چسبد */
+  display: flex;
+  flex-direction: row-reverse; /* ترتیب آیتم‌ها از راست به چپ */
+  padding-right: 10px; /* کمی فاصله از لبه، برای اینکه خیلی نچسبد */
+  gap: 8px;        /* فاصله بین لینک و آیکون */
+
+}
+
+aside li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+aside li a {
+  margin-left: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  /* max-height: fit-content;
+  align-items: center; */
+  /* text-align: center; */
+  /* background-color: #f4f5fa; */
+  /* flex: 1;
+  padding: 20 ; */
+  /* width: 100%; */
+
+  width: 100%;
+  height: auto;
+  background-color: #f4f5fa;
+  padding: 20px;
+  box-sizing: border-box;
+
+
+  
+}
+.slider{
+  width: 100%;
+    margin: 0 auto;
+  /* margin-top: 10px; */
+  padding-top: 10px;
+}
+ .slider-container {
+          position: relative;
+          width: 100%;
+          max-width: 1200px;  /* عرض اسلایدر */
+          margin: 0 auto;
+          overflow: hidden;  /* جلوگیری از بیرون‌زدگی */
+        }
+
+        /* .slider {
+          width: 100%;
+        }
+
+        .slide-img {
+          width: 100%;
+          height: auto;
+        } */
+
+        .wave {
+          position: absolute;
+          bottom: -1px; 
+          left: 0;
+          width: 100%;
+          height: 100px; /* ارتفاع موج */
+          overflow: hidden;
+        }
+h2 {
+  color: #494a52;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h2 svg {
+  margin-right: 30px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.add-form__input {
+  margin-top: 20px;
+}
+
+.add-form__input--first {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+label {
+  color: #7f7e86;
+  font-size: 1.3rem;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  background-color: #fff;
+  color: #7f7e86;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 5px 15px;
+  height: 35px;
+  outline: none;
+  max-width: 500px;
+}
+
+.add-form__input--second {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.add-form__input--second div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px 0;
+}
+
+.add-form__input--second input {
+  box-shadow: none;
+  margin-left: 10px;
+  width: 18px;
+}
+
+.add-form__input--second label {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.add-form__input--second label svg {
+  margin-right: 10px;
+}
+
+.add-form__input--second .todo {
+  background-color: #f2b82e;
+}
+
+.add-form__input--second .inProgress {
+  background-color: #1be2b1;
+}
+
+.add-form__input--second .review {
+  background-color: #3f79f7;
+}
+
+.add-form__input--second .done {
+  background-color: #14d3e2;
+}
+
+button {
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  background-color: #d6d6d6;
+  color: #727272;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.profile-form {
+  padding: 20px;
+}
+
+.profile-form__input {
+  margin-top: 20px;
+}
+
+.profile-form__input div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.profile-data {
+  margin-top: 20px;
+}
+
+.profile-data div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-data span {
+  color: #7f7e86;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.profile-data p {
+  font-size: 1.2rem;
+  color: #494a52;
+  font-weight: 500;
+}
+.profile-data-link{
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #3f79f7;
+border-radius: 5px;
+}
+.home-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-page div {
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.home-page p {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.home-page--todo p {
+  background-color: #f2b82e;
+}
+
+.home-page--inProgress p {
+  background-color: #1be2b1;
+}
+
+.home-page--review p {
+  background-color: #3f79f7;
+}
+
+.home-page--done p {
+  background-color: #14d3e2;
+}
+
+.home-page .tasks {
+  margin: 0;
+}
+
+.tasks .tasks__card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 15px;
+  margin: 25px 15px;
+}
+
+.tasks .tasks__card span {
+  width: 50%;
+  height: 3px;
+  display: block;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+.tasks .tasks__card span.todo {
+  background-color: #f2b82e;
+}
+.tasks .tasks__card span.inProgress {
+  background-color: #1be2b1;
+}
+.tasks .tasks__card span.review {
+  background-color: #3f79f7;
+}
+.tasks .tasks__card span.done {
+  background-color: #14d3e2;
+}
+
+.tasks .tasks__card h4 {
+  color: #494a52;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.tasks .tasks__card div {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 25px 0 0 0;
+}
+
+.tasks .tasks__card div button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.tasks .tasks__card div .button-next {
+  background-color: #cdf8ee;
+  color: #03ab81;
+}
+
+.tasks .tasks__card div .button-back {
+  background-color: #f8eccf;
+  color: #e5a000;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.signin-form h3 {
+  color: #494a52;
+  margin-bottom: 50px;
+}
+
+.signin-form input {
+  margin-bottom: 30px;
+}
+
+.signin-form div {
+  margin-top: 50px;
+  display: flex;
+  color: #7f7e86;
+}
+
+.signin-form a {
+  color: #3f47f4;
+}
+.balance-div{
+  margin-top: 0px;
+   font-family:'B Nazanin';
+   max-height: 150px;
+  display: grid;
+  flex-wrap: wrap;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+.divRadius{
+  border-radius: 50%;
+}
+.service{
+   font-family:'B Nazanin';
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column; /* چینش عمودی */
+  align-items: center;    /* وسط‌چین افقی */
+ 
+  margin-top: 20px;
+
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+}
+.service.inactive {
+  opacity: 0.6;
+}
+
+.service.active {
+  opacity: 1;
+}
+/* .service img{
+  width: 200px;
+  border-radius: 50%;
+   border: 10px;
+  border-color: #355674;
+} */
+ .img-border {
+  border-radius: 50%;
+  border: 10px solid #355674;
+}
+
+.service button{
+  font-family:'B Nazanin';
+  background-color: #F4F5FA;
+  color: #000;
+  margin-top: 10px; /* فاصله از عکس */
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.textServices{
+   font-family:'B Nazanin';
+  font-size: 1.3rem;
+  padding: 30px;
+
+}
+.classH2{
+  font-family: 'B Nazanin';
+  margin-top: 10px;
+  margin-right: 40px;
+  max-height: 15px;
+}
+.about{
+   position:absolute;
+  padding-top:100px;
+  margin-right: 100px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 1.4rem;
+  height: auto;
+
+}
+.aboutus{
+  margin-top: 10px;
+  margin-right: 40px;
+   background-image: url('/images/Backg1.jpg'); /* مسیر عکس در پوشه public */
+  background-size: cover;        /* عکس کل صفحه را پوشش می‌دهد */
+  background-position: center;   /* وسط‌چین */
+  background-repeat: no-repeat;  /* تکرار نشود */
+  height: 100vh;                 /* ارتفاع کل صفحه */
+  width: 100%;
+
+}
+.aboutus h2,h3{
+padding-right: 10px;
+}
+.aboutus p {
+  max-width: 95%;
+  margin-left: 50px;
+   margin-top: 10px;
+  margin-right: 40px;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+.infoLi{
+  position:absolute;
+  padding-top:30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 1.4rem;
+  height: auto;
+}
+.gridLi{
+  
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* دو ستون */
+  gap: 2rem; /* فاصله بین ستون‌ها */
+  justify-content: center; /* قرارگیری در وسط صفحه */
+  align-items: start; /* ترازبندی عمودی */
+  margin: 0 auto; /* مرکز کردن کل بلوک */
+  text-align: right; /* جهت چینش آیتم‌ها */
+}
+.gridLi li{
+  font-size: 1.3rem;
+}
+.gridLi li::before {
+  content: "- ";
+  color: #000;
+}
+
+.Certificatecontainer{
+ position: fixed;
+ 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+
+
+}
+
+.CertificateClose {
+font: 1em sans-serif;
+position: sticky;      /* مهم: همیشه دیده می‌شود */
+  top: 0;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+
+
+}
+.CertificateShow {
+ width: 450px;
+ max-height: 90vh; 
+  background-color: #18181ce6;
+  border: 2px solid #404042;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+
+ /* overflow-y: auto;      */
+
+  
+}
+.CertificateShow img{
+  max-width: 100%;   
+  max-height: 80vh;   /* خیلی مهم: عکس را در ارتفاع صفحه جا می‌دهد */
+  object-fit: contain;
+  border-radius: 10px;
+}
+.PicContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.balanceItem {
+  height: auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.balanceItem button{
+ font-family: 'B Nazanin';
+  font-size: 1rem;
+  background-color: #F4F5FA;
+}
+
+/* آیتم داخلی برای وسط نگه داشتن عکس و دکمه */
+.balanceItem > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* موبایل ریسپانسیو */
+@media (max-width: 600px) {
+  .balanceItem {
+    grid-auto-flow: row; /* تک ستونه شود */
+    gap: 20px; /* فاصله کمتر برای موبایل */
+  }
+}
+.balanceMiddle{
+  margin-top: 20px;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 2px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content:center;
+  align-items:start;
+  max-height: 200px;
+  flex-wrap: wrap;
+ 
+}
+@media (max-width: 768px) {
+  .balanceMiddle {
+    flex-direction: column;
+  }
+}
+
+.middle{
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  /* width: 50%; */
+  position: relative;
+  padding-right: 10px;
+  min-width: 250px;
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* متن را می‌شکند */
+}   
+.middle link{
+  font-weight: bold;
+}
+.middle p{
+  /* padding-right: 15px; */
+  text-align: right;
+  text-align: justify;
+}
+.boldLi{
+  font-weight: bold;
+  
+}
+li.boldLi::before{
+content: "⚫";
+font-weight: bold;
+font-size: 0.5rem;
+  color: #000;
+}
+.picbackg{
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 40px;
+  /* justify-content: center;
+  align-items: center; */
+ 
+background-image: url('/images/Backg1.jpg'); /* مسیر عکس در پوشه public */
+    background-size: cover;        /* عکس کل صفحه را پوشش می‌دهد */
+  background-position: center;   /* وسط‌چین */
+  background-repeat: no-repeat;  /* تکرار نشود */
+  height: 100vh;                 /* ارتفاع کل صفحه */
+  width: 100%;
+}
+.backgroundSite{
+background-image: url('/images/Backg4.jfif'); /* مسیر عکس در پوشه public */
+    background-size: cover;        /* عکس کل صفحه را پوشش می‌دهد */
+  background-position: center;   /* وسط‌چین */
+  background-repeat:repeat;
+}
+li.otherLi::before {
+  font-weight: bold;
+  content: "- ";
+  color: #000;
+}
+.middleDiv{
+ margin-bottom: 5px;
+  position: relative;
+  width: 300px;
+  background-color:#fff;
+}
+.linkColor{
+  color:#3f79f7;
+}
+
+
+
+.alignBack {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* width: 100%; */
+  /* max-width: 1500px; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ProjectImage {
+  flex-shrink: 0;
+  display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ⭐⭐ این بخش کلید حل مشکل است ⭐⭐ */
+.sliderWrapper {
+  flex: 1;       /* فضای باقیمانده کامل */
+  min-width: 0;  /* اجازه بده عرض اسلایدر کوچک شود */
+  overflow: hidden;
+}
+
+
+
+.backClass{
+  color:#3f79f7;
+   direction: ltr; /* تا نوشته لینک برعکس نشود (اختیاری) */
+   margin-left: 20px;
+
+}
+.ProjectImage:first-child img {
+  width: 250px;
+  height: auto;
+}
+
+/* اسلایدر فضای باقی‌مانده را اشغال کند */
+.ProjectImage:last-child {
+  flex-grow: 1;
+  min-width: 0; /* مهم برای جلوگیری از overflow */
+}
+.swiper-slide {
+  width: auto !important;
+}
+.my-slider-container {
+  width: 100% !important;
+}
+
+.my-slider-container .swiper {
+  width: 100% !important;
+}
+
+.my-slider-container .swiper-slide {
+  width: auto !important;
+}
+.swiper-slide img {
+
+  width: 100%;   /* عرض تصویر به اندازه اسلاید */
+  height: auto;  /* ارتفاع متناسب با عرض */
+  display: block; /* حذف فاصله‌های زیر تصویر */
+}
+
+.navbar {
+  /* background: #222; */
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;         /* افقی کردن */
+  gap: 20px;             /* فاصله بین آیتم‌ها */
+  margin: 0;
+  padding: 0;
+  align-items: center;   /* تراز عمودی */
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 5px;              /* فاصله بین لینک و آیکون */
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  color: #00c3ff;
+}
+.projectsContainer{  
+ 
+  margin: 0;
+  padding: 0;
+}
+
+/* متن ssss: - خط بالا، رنگ مشکی */
+.projectP {
+  color: black;
+  margin: 0 0 4px 0; /* فاصلهٔ کم با خط بعد */
+  font-weight: 600;
+}
+
+/* هر آیتم پایین تر کمی جلوتر از ssss: قرار بگیرد */
+.divLink {
+ display: inline-flex !important; /* محتوا حتماً در یک خط */
+  flex-direction: row !important;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+  margin-bottom: 4px;
+  white-space: nowrap; /* جلوگیری از خط‌بعدی */
+}
+
+/* نقطه‌ی ◾ */
+.divLink p {
+  margin: 0;
+}
+
+.projectLink{
+text-decoration: none;
+  color: #377588;
+  /* color: #0070f3; */
+}
+.projectLink:hover {
+  text-decoration: underline;
+}
+.projectAlign {
+  display: flex;
+   flex-direction: row; 
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* پروفایل سمت راست */
+.profileData {
+  width: 30%;
+  text-align: center;
+}
+
+/* عکس‌ها سمت چپ */
+.pictureProj {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;            /* تا عکس‌ها پشت سر هم و به خط بعد بروند */
+  justify-content: center;     /* عکس‌ها وسط چین */
+  gap: 15px;
+}
+
+/* .pictureProj div {
+  display: flex;
+  justify-content: center;
+} */
+
+.pictureProj img {
+  width: 350px;
+  height: 200;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* .pictureProj img{
+  width: 400px;
+  height: 300px;
+} */
+ .processStep{
+   grid-template-columns: repeat(2, auto); /* هر خط 2 تا */
+   flex-wrap: wrap;  
+     /* flex-direction: column;  */
+     justify-content: space-between;
+     gap: 5px;
+  /* width: auto; */
+  
+  gap: 8px 10px; /* فاصله بین p ها */
+  align-items: center;
+ }
+ @media (max-width: 900px) {
+  .header {
+    gap: 10px;
+  }
+
+  .site-info h3 {
+    font-size: 1rem;
+  }
+  .site-info p {
+    font-size: .7rem;
+  }
+
+  .vertical-lines {
+    display: none;  /* بهترین کار! */
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap; /* اجازه بدهد دو خط شود */
+  }
+
+  .right-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .center-section {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .left-section {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 33.333%;   /* سه اسلاید در هر صفحه */
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.thirdMid{
+    direction: rtl;
+  background: #4e75a3;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: auto;
+  flex-wrap: wrap; /* برای ریسپانسیو */
+}
+.callUs{
+   display: flex;
+  align-items: center;
+  gap: 5px;  
+}
+.contactFont{
+ 
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+.pBlue{
+  color: #5783be;
+}
+.contactUs{ 
+  background-image: url('/images/Backg4.jfif'); /* مسیر عکس در پوشه public */
+    background-size: cover;        /* عکس کل صفحه را پوشش می‌دهد */
+  background-position: center;   /* وسط‌چین */
+  background-repeat: no-repeat;  /* تکرار نشود */
+   display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+.mapStyle{
+  width: 400px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin: 15px 0;
+  direction: rtl;
+}
+
+.breadcrumb a {
+  color: #0070f3;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .sep {
+  margin: 0 5px;
+  color: #666;
+}
+
+.breadcrumb .current {
+  font-weight: bold;
+  color: #222;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.item {
+  width: calc(25% - 16px); /* سه‌ستونی */
+}
+
+/* برای حالت دو ستون */
+@media (max-width: 600px) {
+  .item {
+    width: calc(50% - 16px);
+  }
+}
+
+
