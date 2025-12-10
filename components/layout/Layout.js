@@ -65,7 +65,7 @@ function Layout({ children }) {
         </section>
       </div>
       <footer>
-        <p>Developed by Roshanak.A</p>
+        <p>Developed by R.Ahmadpour</p>
       </footer>
     </div>
   );
