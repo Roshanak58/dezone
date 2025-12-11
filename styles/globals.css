@@ -899,7 +899,10 @@ position: sticky;      /* مهم: همیشه دیده می‌شود */
 }
 @media (max-width: 768px) {
   .balanceMiddle {
-    flex-direction: column;
+   grid-auto-flow: row;   /* از ستون به ردیف */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: unset;
   }
 }
 
