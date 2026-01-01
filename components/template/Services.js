@@ -143,25 +143,23 @@ function Services() {
     <>
       <h2 className="classH2">خدمات شرکت مهندسی دزون: </h2>
       <div className="balance-div">
-        <div className={`service ${active === 9 ? "active" : "inactive"}`}>
+        <div className={`service ${active === 6 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
-            src="/images/supplyer.jpg"
+            src="/images/engineer.jpg"
             alt="Logo"
-            width={130}
-            height={130}
+            width={110}
+            height={120}
           />
-          <button onClick={() => supplyerClick()}>
-            تأمین قطعات از سازندگان خارجی
-          </button>
+          <button onClick={() => enginerSClick()}>خدمات مهندسی</button>
         </div>
         <div className={`service ${active === 1 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
             src="/images/sewage.jpg"
             alt="Logo"
-            width={130}
-            height={130}
+            width={120}
+            height={120}
           />
           <button onClick={() => wwtreatmentClick()}>تصفیه فاضلاب</button>
         </div>
@@ -171,8 +169,8 @@ function Services() {
             className="img-border"
             src="/images/water.jpg"
             alt="Logo"
-            width={130}
-            height={130}
+            width={120}
+            height={120}
           />
           <button onClick={() => wtreatmentClick()}>تصفیه آب</button>
         </div>
@@ -181,12 +179,12 @@ function Services() {
             className="img-border"
             src="/images/pumping.jpg"
             alt="Logo"
-            width={130}
-            height={130}
+            width={120}
+            height={120}
           />
           <button onClick={() => pStationClick()}>ایستگاه پمپاژ</button>
         </div>
-        <div className={`service ${active === 4 ? "active" : "inactive"}`}>
+        {/* <div className={`service ${active === 4 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
             src="/images/pipes.png"
@@ -205,24 +203,15 @@ function Services() {
             height={130}
           />
           <button onClick={() => collectTClick()}>شبکه جمع آوری فاضلاب</button>
-        </div>
-        <div className={`service ${active === 6 ? "active" : "inactive"}`}>
-          <Image
-            className="img-border"
-            src="/images/engineer.jpg"
-            alt="Logo"
-            width={120}
-            height={130}
-          />
-          <button onClick={() => enginerSClick()}>خدمات مهندسی</button>
-        </div>
+        </div> */}
+        
         <div className={`service ${active === 8 ? "active" : "inactive"}`}>
           <Image
             className="img-border"
             src="/images/operation.jpg"
             alt="Logo"
             width={120}
-            height={130}
+            height={120}
           />
           <button onClick={() => oprationClick()}>بهره برداری و نگهداری</button>
         </div>
@@ -231,10 +220,22 @@ function Services() {
             className="img-border"
             src="/images/afterSale.png"
             alt="Logo"
-            width={130}
-            height={130}
+            width={120}
+            height={120}
           />
           <button onClick={() => afterSaleClick()}>خدمات پس از فروش </button>
+        </div>
+        <div className={`service ${active === 9 ? "active" : "inactive"}`}>
+          <Image
+            className="img-border"
+            src="/images/supplyer.jpg"
+            alt="Logo"
+            width={120}
+            height={120}
+          />
+          <button onClick={() => supplyerClick()}>
+            تأمین قطعات از سازندگان خارجی
+          </button>
         </div>
       </div>
 
@@ -276,7 +277,7 @@ function Services() {
         {wtreatment === 1 && (
           <div className="infoLi">
             <p>
-              همچنین، شرکت مهندسی دزون تعداد قابل ملاحظه ای پروژه کلید در دست در
+               شرکت مهندسی دزون تعداد قابل ملاحظه ای پروژه کلید در دست در
               زمینه تصفیه آب انجام داده است. این پروژه ها در طیف وسیعی از پروژه
               های کوچک مانند سختی گیری آب، فیلتر یا واحدهای تزریق مواد شیمیایی
               تا پروژه های بزرگ در مقیاس شهری و صنعتی را شامل می شوند.

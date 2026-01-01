@@ -46,6 +46,7 @@ function DrinkingWaterPurification() {
               </li>
               <li className="otherLi">حذف بو و رنگ </li>
               <li className="otherLi">تغلیظ لجن </li>
+              <li className="otherLi">آبگیری لجن </li>
             </ul>
           </div>
         </div>

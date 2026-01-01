@@ -9,9 +9,9 @@ function HomePage() {
   return (
      <div  className="backgroundSite">
         <ImageSlider/>
-        <MiddlePart/>
+        {/* <MiddlePart/>
         <MiddlePart2/>
-        <MiddlePart3/>
+        <MiddlePart3/> */}
     </div>
   )
 }

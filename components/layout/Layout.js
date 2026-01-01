@@ -15,16 +15,28 @@ import Breadcrumb from "../module/Breadcrumb";
 function Layout({ children }) {
   return (
     <div className="container">
-      <Header/>
-      
+      <Header />
+
       {/* {status === "authenticated" ? (
           <button onClick={logOutHandler}>
             Logout
             <FiLogOut />
           </button>
         ) : null} */}
-     
-      <Breadcrumb/>
+
+     <div className="rightHead-section">
+  <Breadcrumb />
+  <div className="leftHead-section">
+    <div className="lang">
+      <Link href="/">En</Link>/<Link href="/">fa</Link>
+    </div>
+    <div>
+      <Link href="/">
+        <h4>ورود</h4>
+      </Link>
+    </div>
+  </div>
+</div>
 
       <div className="container--main">
         {/* <aside>
@@ -59,10 +71,7 @@ function Layout({ children }) {
             </li>
           </ul>
         </aside> */}
-        <section>
-          {children}
-         
-        </section>
+        <section>{children}</section>
       </div>
       <footer>
         <p>Developed by R.Ahmadpour</p>

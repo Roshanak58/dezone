@@ -14,6 +14,10 @@ function Navbar() {
           <TiHomeOutline />
           <Link href="/">خانه</Link>
         </li>
+        <li>
+          <FaPeopleRoof />
+          <Link href="/aboutus">درباره ما  </Link>
+        </li>
       
         <li>
           <MdWaterDrop />
@@ -25,10 +29,6 @@ function Navbar() {
           <Link href="/projects">پروژه ها  </Link>
         </li>
      
-        <li>
-          <FaPeopleRoof />
-          <Link href="/aboutus">درباره ما  </Link>
-        </li>
      
         <li>
           <IoCallOutline />

@@ -70,6 +70,8 @@ function urbanWasteWater() {
               <li className="otherLi"> هضم هوازی </li>
               <li className="otherLi">کمپوست</li>
               <li className="otherLi">تزریق مواد شیمیایی</li>
+              <li className="otherLi">آبگیری</li>
+              <li className="otherLi">خشک کردن با حرارت</li>
             </ul>
           </div>
         </div>

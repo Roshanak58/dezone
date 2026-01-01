@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ProjData as projectdata } from "../../constants/ProjData";
 
 import Link from "next/link";
+import Image from "next/image";
 
 function Projects() {
   const activeItems = projectdata.filter((item) => item.Status === "active");
@@ -15,6 +16,10 @@ function Projects() {
 
   return (
     <div className="projectsContainer">
+      <div className="ProjectImage">
+              <h3> پروژه های دزون در سراسر ایران</h3>
+              <Image src="/images/map.jpg" alt="Logo" width={250} height={200}   />
+            </div>
       <div>
         <p className="projectP">پروژه های فعال:</p>
         {aProjects.map((aproj) => (

@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "embla-carousel-react": "^8.6.0",
+    "i18next": "^25.7.2",
     "leaflet": "^1.9.4",
     "next": "^16.0.8",
+    "next-i18next": "^15.4.3",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
+    "react-i18next": "^16.5.0",
     "react-icons": "^5.5.0",
     "react-leaflet": "^5.0.0",
     "react-slick": "^0.31.0",

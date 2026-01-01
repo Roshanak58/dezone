@@ -33,6 +33,7 @@ function Index({ servProject, picproj, processproj }) {
         <div>
           <h3>ظرفیت :</h3>
           <p>{project?.capacity}</p>
+          <a> متر مکعب در روز </a>
         </div>
         <div>
           <h3>موقعیت :</h3>
@@ -50,8 +51,8 @@ function Index({ servProject, picproj, processproj }) {
           <h3>مراحل فرایند :</h3>
           <div className="flex-container">
             {processStep.map((procS) => (
-              <div key={procS.id} className="item">
-                <p style={{ fontWeight: "bold", paddingLeft: "5px" }}> ⁕ </p>
+              <div key={procS.id} >
+                <p style={{ fontWeight: "bold", paddingLeft: "5px" }}> - </p>
                 <p>{procS?.processStep}</p>
               </div>
             ))}

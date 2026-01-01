@@ -7,7 +7,7 @@ employer:"شرکت آب و فاضلاب آذربایجان شرقی",
 consultant:" شرکت مهندسین مشاور فرازآب",
 contractor:"شرکت مهندسی دزون،شرکت نصر اصفهان ، مهندسین مشاورطوس آب",
 typeOfContract:"EPC",
-capacity:"m3/d207475",
+capacity:"  207475 ",
 location:"شهرتبریز",
 process:" لجن فعال step feed",
 Status:"active",
@@ -18,7 +18,7 @@ employer:"شرکت فاضلاب تهران",
 consultant:"شرکت مهندسین مشاور مهاب قدس",
 contractor:"شرکت مهندسی دزون، شرکت نصر سپهر ، شرکت پایندآب کوشا",
 typeOfContract:"EPC",
-capacity:"m3/d319680",
+capacity:"319680  ",
 location:"شهرتهران",
 process:" لجن فعال A2O ",
 
@@ -30,7 +30,7 @@ employer:"شرکت آب و فاضلاب جنوب غرب استان تهران ",
 consultant:"شرکت مهندسین مشاور آبران",
 contractor:"شرکت مهندسی دزون ، شرکت بردو",
 typeOfContract:"EPC",
-capacity:"m3/d40000  ",
+capacity:"40000    ",
 location:"اسلامشهر – واوان",
 process:" MLE",
 Status:"active",
@@ -41,7 +41,7 @@ employer:"شرکت آب و فاضلاب استان هرمزگان",
 consultant:"شرکت مهندسین مشاور پارس آب تدبیر",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-capacity:" m^3⁄day10886 ",
+capacity:"  10886",
 location:"شهررودان",
 Status:"Inactive",
 supply:"1"},
@@ -51,7 +51,7 @@ employer:"شرکت آب و فاضلاب استان قزوین",
 consultant:"شرکت مهندسین مشاور آرنا",
 contractor:"شرکت مهندسی دزون، شرکت بردو",
 typeOfContract:"BOT",
-capacity:" m^3⁄day7334",
+capacity:" 7334   ",
 location:"شهرمحمود آباد",
 Status:"Inactive",
 supply:"1"},
@@ -61,7 +61,7 @@ employer:"شرکت آب منطقه ای مازندران ",
 consultant:"شرکت مهندسین مشاور مهاب قدس",
 contractor:"شرکت مهندسی دزون، شرکت نصراصفهان",
 typeOfContract:"PC",
-capacity:"m3/d 129600",
+capacity:"129600   ",
 location:"شهر ساری",
 Status:"active",
 supply:"1"},
@@ -71,7 +71,7 @@ employer:"شرکت آب منطقه ای اردبیل- شرکت طرح و پال�
 consultant:"شرکت مهندسین مشاور آبران",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"BOT",
-capacity:"m3/d 12312",
+capacity:"  12312",
 location:"شهر خلخال",
 Status:"Inactive",
 supply:"0"},
@@ -81,7 +81,7 @@ employer:"شرکت آب منطقه ای آذربایجان شرقی",
 consultant:"شرکت مهندسین مشاور آبران",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-capacity:" m^3⁄day38880",
+capacity:"  38880",
 location:"شهر میانه",
 Status:"Inactive",
 supply:"1"},
@@ -91,7 +91,7 @@ employer:"شرکت آب منطقه ای کرمان",
 consultant:"شرکت مهندسین مشاور توس آب",
 contractor:"شرکت مهندسی دزون، شرکت بردو",
 typeOfContract:"PC",
-capacity:" m^3⁄day129600",
+capacity:"  129600",
 location:"شهر بم",
 Status:"Inactive",
 supply:"1"},
@@ -101,7 +101,7 @@ employer:"شرکت آب و فاضلاب بهارستان",
 consultant:"شرکت مهندسین مشاور طرح و تحقیقات آب  و فاضلاب ", 
 contractor:"شرکت مهندسی دزون ",
 typeOfContract:"EPC",
-capacity:" m^3⁄day46656",
+capacity:"  46656",
 location:"شهر بهارستان",
 process:" فرآیندMLE",
 Status:"Inactive",
@@ -112,7 +112,7 @@ employer:"شرکت آب و فاضلاب استان همدان ",
 consultant:"شرکت مهندسین مشاور موجاب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-capacity:" m^3⁄day25920",
+capacity:"  25920",
 Status:"Inactive",
 supply:"0"},
 {id:"12",
@@ -121,7 +121,7 @@ employer:"شرکت مبین پتروشیمی – شرکت پتروصنعت اص�
 consultant:"شرکت مهندسین سازه",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day10200",
+capacity:"  10200",
 location:"شهرک صنعتی عسلویه",
 Status:"Inactive",
 supply:"1"},
@@ -131,7 +131,7 @@ employer:"شرکت آب و فاضلاب گلستان",
 consultant:"شرکت مهندسین مشاور پژوهاب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day18120 ",
+capacity:"  18120 ",
 location:"شهر کردکوی",
 process:" هوادهی گسترده لجن فعال ",
 Status:"Inactive",
@@ -142,7 +142,7 @@ employer:"شرکت آب و فاضلاب مازندران",
 consultant:"شرکت مهندسین مشاور مهاب قدس",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day92016",
+capacity:"  92016",
 location:"شهر ساری",
 Status:"Inactive",
 supply:"0"},
@@ -152,7 +152,7 @@ employer:"شرکت آب و فاضلاب سمنان",
 consultant:"شرکت مهندسین مشاور آبران",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day35400",
+capacity:"  35400",
 location:"شهر سمنان",
 Status:"Inactive",
 supply:"0"},
@@ -162,7 +162,7 @@ employer:"شرکت آب و فاضلاب استان خوزستان",
 consultant:"شرکت مهندسین مشاور ری آب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day38016",
+capacity:"  38016",
 location:"شهردزفول",
 Status:"Inactive",
 supply:"1"},
@@ -172,7 +172,7 @@ employer:"شرکت آب و فاضلاب گلستان",
 consultant:"شرکت مهندسین مشاور پژوهاب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day18120 ",
+capacity:"  18120 ",
 location:"شهر کردکوی",
 process:" هوادهی گسترده لجن فعال ",
 Status:"Inactive",
@@ -183,7 +183,7 @@ employer:"شرکت آب و فاضلاب گلستان",
 consultant:"شرکت مهندسین مشاور پژوهاب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day8640 ",
+capacity:"  8640 ",
 location:"شهر بندر گز",
 process:" لاگون های هوادهی",
 Status:"Inactive",
@@ -194,7 +194,7 @@ employer:"شرکت آب و فاضلاب آذربایجان غربی",
 consultant:"شرکت مهندسین مشاور آشناب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day78840 ",
+capacity:"  78840 ",
 location:"شهر مهاباد",
 process:" لاگون های هوادهی",
 Status:"Inactive",
@@ -205,7 +205,7 @@ employer:"شرکت سهامی آب منطقه¬ای آذربایجان غربی 
 consultant:"شرکت مهندسین مشاور آشناب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day28920",
+capacity:"  28920",
 location:"شهر تکاب",
 Status:"Inactive",
 supply:"1"},
@@ -215,7 +215,7 @@ employer:"شرکت آب و فاضلاب اردبیل",
 consultant:"مهندسین مشاور مهاب قدس",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"PC",
-capacity:" m^3⁄day18360 ",
+capacity:"  18360 ",
 Location:" شهر اردبیل",
 Process:" لاگون هوادهی اختلاط کامل",
 Status:"Inactive",
@@ -226,7 +226,7 @@ employer:"شرکت آب و فاضلاب همدان",
 consultant:"شرکت مهندسین مشاور مشارآب",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-capacity:" m^3⁄day21600",
+capacity:"  21600",
 location:"شهر همدان",
 Status:"Inactive",
 supply:"0"},
@@ -255,7 +255,7 @@ employer:"شرکت شهرک صنعتی ایران",
 consultant:"شرکت مهندسین مهاب قدس",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-Capacity:" m^3⁄day5280",
+Capacity:"  5280",
 location:"شهرک صنعتی شهید سلیمی",
 Status:"Inactive",
 supply:"0"},
@@ -265,7 +265,7 @@ employer:"شرکت صنایع لاستیک تایر کرد",
 consultant:"شرکت مهندسین سازه",
 contractor:"شرکت مهندسی دزون",
 typeOfContract:"EPC",
-capacity:" m^3⁄day576",
+capacity:"  576",
 location:"شهر زنجان",
 Status:"Inactive",
 supply:"0"},

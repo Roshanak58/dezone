@@ -5,7 +5,7 @@ function Index({ projS, oneProj }) {
   const [project, setProject] = useState(projS);
   const [onePr, setOnePr] = useState(oneProj);
   return (
-    <>
+    <div className="right-section">
       <div className="projectAlign">
         <div className="profile-data">
           <div>
@@ -22,7 +22,7 @@ function Index({ projS, oneProj }) {
           </div>
         </div>
       </div>
-      <div>
+      <div className="centerItems">
         <table>
           <thead>
             <tr>
@@ -35,13 +35,13 @@ function Index({ projS, oneProj }) {
             {projS.map((proS) => (
               <tr key={proS.id}>
                 <td> {proS.materiel}</td>
-                <td>{proS.compan}</td>
+                <td className="tdLeft">{proS.compan}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 

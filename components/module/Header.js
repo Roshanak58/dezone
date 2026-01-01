@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import { useRouter } from "next/router";
 
 function Header() {
+  const router = useRouter();
   {
     /*<div class="site-info">
           <h3>نام سایت</h3>
@@ -30,13 +32,13 @@ function Header() {
         </div>
       </div>
 
-      <div className="vertical-lines">
+      {/* <div className="vertical-lines">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </div> */}
 
       {/* منو وسط */}
       <div className="center-section">
@@ -44,25 +46,44 @@ function Header() {
       </div>
 
       {/* بخش چپ */}
-      <div className="left-section">
+      {/* <div className="left-section">
         <div className="search-area">
           <button className="search-btn">🔍</button>
           <input type="text" placeholder="جستجو..." className="search-input" />
         </div>
-      </div>
+      </div> */}
       <div>
-        <div className="right-section">
-          <p>انتخاب زبان:</p>
+        {/* <div className="right-section">
+          <button
+            className="langSelect"
+            onClick={() =>
+              router.push(router.pathname, router.asPath, { locale: "en" })
+            }
+          >
+            En
+          </button>
+          /
+
+          <button
+            className="langSelect"
+            onClick={() =>
+              router.push(router.pathname, router.asPath, { locale: "fa" })
+            }
+          >
+            fa
+          </button>
+        </div> */}
+        {/* <div className="right-section">
           <Link href="/">fa</Link>
-          <p>/</p>
+          /
           <Link href="/">En</Link>
         </div>
-        <div >
-          <hr/>
+        <div>
+          <hr />
           <Link href="/">
             <h4>ورود</h4>
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
