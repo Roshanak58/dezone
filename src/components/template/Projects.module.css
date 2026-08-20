@@ -1,0 +1,146 @@
+.projectsContainer {
+    background-image: url('/images/infoBack.png');
+ background-size:cover;        /* عکس کل صفحه را پوشش می‌دهد */
+  background-position: center;   /* وسط‌چین */
+  background-repeat: no-repeat;
+ margin: 1%;
+  padding: 0;
+  padding-bottom: 30px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  gap: 30px;
+  direction: rtl;
+  border-radius: 20px;
+}
+.ProjectsHeader{
+  
+   border-radius: 20px;
+   background-image: url('/images/ProjectsHeader.png');  
+   /*  */
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  height: 200px;
+
+}
+.ProjectsHeader::after {
+    border: none; /* حذف مرز پیشفرض */
+    height: 2px; /* ارتفاع خط */
+    background-color: blue; /* رنگ خط */
+    margin-top: 5px;
+}
+.ProjectsHeader h3{
+  border-bottom: 3px solid #6cb6de;
+display: inline-block;
+padding-bottom: 8px;
+
+  padding-top: 100px;
+  margin-right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  
+  color: #fafafb;
+}
+.projectSections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-right: 10%;
+  direction: rtl;
+}
+
+.sectionColumn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 25px;
+  direction: rtl;
+  width: 80%;
+ 
+}
+.sectionBack{
+ background-color: rgba(230, 226, 226, 0.127);
+}
+.projectP {
+  grid-column: 1 / -1;
+  color: black;
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.divLink {
+  display: flex !important;
+  /* flex-direction: row; */
+  align-items: center;
+  gap: 6px;
+
+  margin: 0;
+  width: auto;              /* خیلی مهم */
+  font-size: 1.1rem;
+
+  direction: rtl;
+  white-space: nowrap !important;
+  
+}
+
+.divLink p {
+  margin: 0;
+  font-size: 1.2rem;
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.projectLink {
+  position: relative;
+  display: inline-block;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  padding: 4px 8px;
+
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+
+  transition: all 0.25s ease;
+}
+
+.projectLink::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #72cfff;
+
+  transition: width 0.25s ease;
+}
+
+.projectLink:hover {
+  color: #9cddff;
+  transform: translateX(-3px);
+}
+
+.projectLink:hover::after {
+  width: calc(100% - 8px);
+}
+
+.ProjectImage {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تبلت و موبایل */
+@media (max-width: 768px) {
+  .sectionColumn {
+    grid-template-columns: 1fr;
+  }
+}
