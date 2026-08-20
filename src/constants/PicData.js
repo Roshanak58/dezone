@@ -935,7 +935,7 @@ const PictureData = [
     id: "324",
     idProj: "12",
     name: " تصفیه خانه فاضلاب شهر مهاباد ",
-    pic: "/images/projects/mahabad11.jpg",
+    pic: "/images/projects/mahabad11.JPG",
     Asli: 0,
   },
   {
