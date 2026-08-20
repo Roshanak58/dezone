@@ -240,7 +240,7 @@ font-weight: bold;
 }
  .ulHover:hover{
   transform: scale(1.2);
-  background-color:#d2e3f650;
+  background-color:#cbcfd4;
   border-radius: 10px;
  }
  @media (max-width: 768px){

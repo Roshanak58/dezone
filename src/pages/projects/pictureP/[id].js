@@ -9,7 +9,14 @@ function Index({ picproj, projName, projId }) {
   return (
     <div>
       <div className={styles.ProjectsHeader}>
-        <h3>{projName} </h3>
+        <Link
+          href={{
+            pathname: `/projects/${projId}`,
+          }}
+          className={styles.colorLinkk}
+        >
+          <h3>{projName} </h3>
+        </Link>
       </div>
       {/* <h3 className={styles.classh33}>
         {" "}

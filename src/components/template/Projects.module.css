@@ -49,13 +49,20 @@ padding-bottom: 8px;
   direction: rtl;
 }
 
-.sectionColumn {
+/* .sectionColumn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 25px;
   direction: rtl;
   width: 80%;
  
+} */
+ .sectionColumn {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 25px;
+  direction: rtl;
+  width: 80%;
 }
 .sectionBack{
  background-color: rgba(230, 226, 226, 0.127);
@@ -69,18 +76,16 @@ padding-bottom: 8px;
 }
 
 .divLink {
-  display: flex !important;
-  /* flex-direction: row; */
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   gap: 6px;
 
   margin: 0;
-  width: auto;              /* خیلی مهم */
-  font-size: 1.1rem;
+  width: 100%;
+  min-width: 0;
 
+  font-size: 1.1rem;
   direction: rtl;
-  white-space: nowrap !important;
-  
 }
 
 .divLink p {
@@ -92,17 +97,22 @@ padding-bottom: 8px;
 
 .projectLink {
   position: relative;
-  display: inline-block;
+  display: block;
+
+  min-width: 0;
+  max-width: 100%;
 
   color: #ffffff;
   text-decoration: none;
 
   font-size: 1.1rem;
   font-weight: 500;
-
   padding: 4px 8px;
 
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
 
   transition: all 0.25s ease;
 }
@@ -140,7 +150,23 @@ padding-bottom: 8px;
 
 /* تبلت و موبایل */
 @media (max-width: 768px) {
+
   .sectionColumn {
     grid-template-columns: 1fr;
+    width: 90%;
+    gap: 10px;
+  }
+
+  .divLink {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .projectLink {
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }

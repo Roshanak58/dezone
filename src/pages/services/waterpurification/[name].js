@@ -32,7 +32,7 @@ function Index() {
 
             <div className={styles.balanceDiv}>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}> پیش تصفیه:</li>
                   <li className={styles.otherLi}>آشغالگیری در محل تأمین آب </li>
                   <li className={styles.otherLi}>
@@ -51,14 +51,14 @@ function Index() {
                     میکرو، اولترا و نانو فیلتراسیون{" "}
                   </li>
                 </ul>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}>تصفیه بیولوژیکی :</li>
                   <li className={styles.otherLi}> تصفیه بی هوازی </li>
                   <li className={styles.otherLi}> تصفیه هوازی </li>
                 </ul>
               </div>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}>فرآیند حذف املاح :</li>
                   <li className={styles.otherLi}>فیلتراسیون غشایی</li>
                   <li className={styles.otherLi}>تبادل یونی </li>
@@ -66,7 +66,7 @@ function Index() {
                 </ul>
               </div>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}>گند زدایی:</li>
                   <li className={styles.otherLi}> کلریناسیون گازی </li>
                   <li className={styles.otherLi}>
@@ -76,7 +76,7 @@ function Index() {
                   <li className={styles.otherLi}>گند زدایی با ازن </li>
                   <li className={styles.otherLi}> اشعه ماوراء بنفش </li>
                 </ul>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}> بازیافت آب:</li>
                   <li className={styles.otherLi}> بازیافت آب بک واش</li>
                   <li className={styles.otherLi}>زلال سازی </li>
@@ -85,7 +85,7 @@ function Index() {
                 </ul>
               </div>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.boldLi}> تصفیه جامدات :</li>
                   <li className={styles.otherLi}>تغلیظ </li>
                   <li className={styles.anotherboldLi}>تغلیظ ثقلی </li>
@@ -115,14 +115,14 @@ function Index() {
               شرکت مهندسی دزون قادر به ارائه مناسب ترین و اقتصادی ترین روشهای
               تصفیه آب آشامیدنی فارغ از منبع تأمین آب می باشد.
             </p>
-            <ul>
+            <ul >
               <li className={styles.otherLi}>تصفیه آب زیرزمینی و سطحی</li>
               <li className={styles.otherLi}>تصفیه آب دریا و آب شور </li>
             </ul>
             <h2>توانمندیهای شرکت دزون در تصفیه آب شامل مراحل ذیل می باشد: </h2>
             <div className={styles.balanceDiv}>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.otherLi}>آشغالگیری </li>
                   <li className={styles.otherLi}>میکرواسترینر</li>
                   <li className={styles.otherLi}>حذف مواد ارگانیک</li>
@@ -136,7 +136,7 @@ function Index() {
                 </ul>
               </div>
               <div>
-                <ul>
+                <ul className={styles.ulHover}>
                   <li className={styles.otherLi}>میکرو فیلتراسیون </li>
                   <li className={styles.otherLi}>اولترا فیلتراسیون </li>
                   <li className={styles.otherLi}>نانو فیلتراسیون </li>
