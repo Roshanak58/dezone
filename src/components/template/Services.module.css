@@ -1,204 +1,535 @@
+/* =========================
+   Main Background
+========================= */
 
-.backService{
-/* display: grid; */
- /* background-image: url('/images/backtreat.png');  */
-  background-size: cover;     
-  background-position: center;
-  background-repeat: no-repeat;  
-    /* align-items: center; */
+.backService {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 20px 25px 80px;
+
+  direction: rtl;
+
+  background:
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(107, 196, 239, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(86, 183, 235, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #f8fbfe 55%,
+      #eef8fd 100%
+    );
+
+  position: relative;
+  overflow: hidden;
 }
+
+
+/* =========================
+   Water Wave Background
+========================= */
+
+.backService::before {
+  content: "";
+  position: absolute;
+
+  width: 140%;
+  height: 380px;
+
+  left: -20%;
+  bottom: -100px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(123, 207, 244, 0.20),
+      rgba(123, 207, 244, 0.04) 55%,
+      transparent 70%
+    );
+
+  border-radius: 50% 50% 0 0;
+
+  transform: rotate(-3deg);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   Header
+========================= */
+
 .ServiceHeader {
   width: 100%;
-  aspect-ratio: 6 / 1;
+  height: 200px;
 
-  border-radius: 20px;
-  background-image: url('/images/ServiceHeader.png');
-  background-size: 100% 100%;
+  border-radius: 25px;
+
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(4, 48, 88, 0.72),
+      rgba(5, 61, 105, 0.20)
+    ),
+    url("/images/ServiceHeader11.png");
+
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.ServiceHeader::after {
-    border: none; /* حذف مرز پیشفرض */
-    height: 2px; /* ارتفاع خط */
-    background-color: blue; /* رنگ خط */
-    margin-top: 5px;
-}
-.ServiceHeader h3{
-  border-bottom: 3px solid #6cb6de;
-display: inline-block;
-padding-bottom: 8px;
 
-  padding-top: 100px;
-  margin-right: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  
-  color: #fafafb;
-}
-.classH2{
-  /* font-family: 'B Nazanin'; */
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-right: 40px;
-  max-height: 15px;
-  color: black;
-}
-.balanceDiv{
-  background-image: url('/images/infoBackP.png');
- background-size: cover;        /* عکس کل صفحه را پوشش می‌دهد */
-  background-position: center;   /* وسط‌چین */
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  background-color: none;
-  margin-top: 0px;
-  padding-top: 40px;
-  font-size: large;
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); */
-   /* اضافه شده */
-  gap: 8px 10px; /* فاصله بین آیتم‌ها */
-  justify-content: center;
-}
- .imgBorder {
-   transition: transform 0.35s ease;
-   margin-top: 10px;
-  border-radius: 50%;
-  border: 6px solid #0c388d;
-}
-.service {
-  border: #9fa2a9 solid 2px;
-  background-color: #173759c9;
-  border-radius: 10px;
-  width: 45%;
-  height: auto;
-  text-align: center;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-.serviceP{
-  font-size: 1.2rem;
-  margin-top: 10px;   /* فاصله زیر عکس */
-  text-align: center;
-  color: #fff;
-  transition: transform 0.35s ease, color 0.35s ease;
-  
-}
-
-.serviceImg {
- 
-  transition: transform 0.2s ease;
-}
-.overlayText {
-  /* position: absolute; */
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background:#0c388d;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* کلیک از خود لینک می‌گذره */
-}
-/* .service:hover .overlayText,
-.service:active .overlayText,
-.service:focus .overlayText {
-  opacity: 1;
-} */
-
-/* .service:hover .serviceImg,
-.service:active .serviceImg,
-.service:focus .serviceImg {
-  transform: scale(1.15);
-} */
-.liClass{
-   
-align-items: center;
-justify-content: center;
   display: flex;
-  width: 600px;
-  height: auto;
-  gap:20px;
-}
-.service:hover .imgBorder {
-  transform: scale(1.2);
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-right: 8%;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 69, 108, 0.12);
 }
 
-.service:hover .serviceP {
-  transform: scale(1.15);
-  color: #163659;
-}
-/* .liClass img{
-  width: 400px;
-} */
-.aboutLink{
-   /* white-space: nowrap; */
-  /* font-family:'B Nazanin'; */
-  background-color: none;
-  color: #000;
-  margin-top: 10px; /* فاصله از عکس */
-  padding: 8px 16px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-@media (max-width: 768px) {
-     .balanceDiv{
-        margin-top: 0px;
-  /* display: flex; */
-  flex-wrap: wrap; 
-  justify-content:center; 
-   gap: 20px 15px; 
-}
-  /* .service {
-    width: 80px;
-  } */
-  /* .service img{
-    width: 60px;
-    height: 60px;
-  } */
-  /* .serviceP{
-  font-size: 8px;
-  } */
 
-  .overlayText {
-    font-size: 0.75rem;
-    padding: 3px 8px;
-  }
-  .service{
-    width: 70%;
-  }
-  .service button{
-    font-size: 1.2rem;
-  }
-  .imgBorder {
-    width: auto;
-  border: 4px solid #9fa2a9;
-} 
-.service:hover img {
-  border-color:  #0c388d;
-    transform: scale(1.15);
+/* عنوان هدر */
+
+.ServiceHeader h3 {
+  color: #ffffff;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  margin: 0;
+
+  position: relative;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* خط زیر عنوان */
+
+.ServiceHeader h3::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: -18px;
+
+  width: 95px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    to left,
+    #26b8ed,
+    #8bdcf8
+  );
+}
+
+
+/* =========================
+   Grid
+========================= */
+.servicesGrid {
+  width: min(960px, 100%);
+  margin: 45px auto 0;
+
+  display: grid;
+
+  /* دو ستون */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  /* فاصله بین کارت‌ها */
+  column-gap: 30px;
+  row-gap: 22px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   Service Card
+========================= */
+
+.servicesItem {
+  min-width: 0;
+  min-height: 220px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  direction: rtl;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  border: 1px solid #edf3f7;
+
+  box-shadow:
+    0 8px 25px rgba(38, 92, 125, 0.10);
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+}
+/* نوار ظریف کنار کارت */
+
+.servicesItem::before {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 25px;
+  bottom: 25px;
+
+  width: 4px;
+
+  border-radius: 10px 0 0 10px;
+
+  background: linear-gradient(
+    to bottom,
+    #1c6ca8,
+    #57c8ee
+  );
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+.servicesItem:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(82, 190, 232, 0.45);
+
+  box-shadow:
+    0 18px 38px rgba(31, 100, 140, 0.16),
+    0 5px 15px rgba(31, 100, 140, 0.08);
+}
+
+
+.servicesItem:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================
+   Icon
+========================= */
+
+.iconBox {
+  width: 145px;
+  height: 145px;
+
+  min-width: 145px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f3faff
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 5px 20px rgba(38, 125, 170, 0.12),
+    inset 0 0 0 8px rgba(255, 255, 255, 0.8);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  overflow: hidden;
+}
+
+
+.iconBox img {
+  width: 110px;
+  height: 110px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* Hover تصویر */
+
+.servicesItem:hover .iconBox {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 8px 25px rgba(38, 125, 170, 0.20);
+}
+
+
+.servicesItem:hover .iconBox img {
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   Content
+========================= */
+
+.serviceContent {
+  flex: 1;
+
+  min-width: 0;
+
+  text-align: right;
+}
+
+
+.serviceContent h3 {
+  margin: 0 0 14px;
+
+  color: #123f6c;
+
+  font-size: 23px;
+
+  font-weight: 800;
+
+  line-height: 1.7;
+}
+
+
+.serviceContent p {
+  margin: 0;
+
+  color: #4c5865;
+
+  font-size: 15px;
+
+  line-height: 2;
+
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   Bottom Line
+========================= */
+
+.serviceLine {
+  display: block;
+
+  width: 85px;
+  height: 4px;
+
+  margin-top: 17px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    to left,
+    #38aee0,
+    #8bdaf5
+  );
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.servicesItem:hover .serviceLine {
+  width: 105px;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+
+  .backService {
+    padding: 15px 18px 60px;
   }
 
-  .service:hover .aboutLink {
-    display: block;
-    margin-top: 6px;
-  }
-   .service:focus-within img {
-    transform: scale(1.15);
+  .ServiceHeader {
+    height: 180px;
+
+    padding-right: 7%;
   }
 
-  .service:focus-within .aboutLink {
-    display: block;
+  .ServiceHeader h3 {
+    font-size: 34px;
   }
-  .liClass{
-    display: contents;
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+
+    max-width: 700px;
+
+    gap: 20px;
+
+    margin-top: 35px;
   }
+
+  .servicesItem {
+    min-height: 200px;
+  }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+  .backService {
+    padding: 12px 12px 50px;
+  }
+
+  .ServiceHeader {
+    height: 150px;
+
+    border-radius: 18px;
+
+    padding-right: 8%;
+  }
+
+  .ServiceHeader h3 {
+    font-size: 28px;
+  }
+
+  .ServiceHeader h3::after {
+    width: 65px;
+    height: 3px;
+
+    bottom: -12px;
+  }
+
+
+  .servicesGrid {
+    margin-top: 25px;
+
+    gap: 16px;
+  }
+
+
+  .servicesItem {
+    min-height: 0;
+
+    padding: 18px;
+
+    gap: 18px;
+
+    border-radius: 20px;
+  }
+
+
+  .iconBox {
+    width: 95px;
+    height: 95px;
+
+    min-width: 95px;
+  }
+
+
+  .iconBox img {
+    width: 72px;
+    height: 72px;
+  }
+
+
+  .serviceContent h3 {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+  }
+
+
+  .serviceContent p {
+    font-size: 13px;
+
+    line-height: 1.9;
+  }
+
+
+  .serviceLine {
+    width: 55px;
+
+    height: 3px;
+
+    margin-top: 10px;
+  }
+
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 400px) {
+
+  .servicesItem {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 22px 16px;
+  }
+
+
+  .serviceContent {
+    width: 100%;
+
+    text-align: center;
+  }
+
+
+  .serviceContent h3 {
+    font-size: 18px;
+  }
+
+
+  .serviceContent p {
+    font-size: 13px;
+  }
+
+
+  .serviceLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
