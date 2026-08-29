@@ -37,7 +37,7 @@ function Services() {
     {
       title: "خدمات پس از فروش",
       desc: "پشتیبانی تخصصی و ارائه خدمات پس از فروش تجهیزات",
-      icon: "/images/afterSales.png",
+      icon: "/images/afterSalee.png",
       link: "/services/afterSale",
     },
     {
