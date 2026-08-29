@@ -6,62 +6,33 @@
   width: 100%;
   min-height: 100vh;
 
-  padding: 20px 25px 80px;
+  padding: 20px 25px 90px;
 
   direction: rtl;
 
-  background:
-    radial-gradient(
-      circle at 10% 80%,
-      rgba(107, 196, 239, 0.12),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 90% 70%,
-      rgba(86, 183, 235, 0.10),
-      transparent 35%
-    ),
-    linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #f8fbfe 55%,
-      #eef8fd 100%
-    );
-
   position: relative;
   overflow: hidden;
+
+  background-color: #ffffff;
+
+  /*
+    عکس بک گراند موج های آبی
+  */
+  background-image: url("/images/backServise.png");
+
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 
 /* =========================
-   Water Wave Background
+   Header
 ========================= */
 
-.backService::before {
-  content: "";
-  position: absolute;
-
-  width: 140%;
-  height: 380px;
-
-  left: -20%;
-  bottom: -100px;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(123, 207, 244, 0.20),
-      rgba(123, 207, 244, 0.04) 55%,
-      transparent 70%
-    );
-
-  border-radius: 50% 50% 0 0;
-
-  transform: rotate(-3deg);
-
-  pointer-events: none;
-}
-
+/* =========================
+   Header
+========================= */
 
 /* =========================
    Header
@@ -73,17 +44,15 @@
 
   border-radius: 25px;
 
-  background-image:
-    linear-gradient(
-      to left,
-      rgba(4, 48, 88, 0.72),
-      rgba(5, 61, 105, 0.20)
-    ),
-    url("/images/ServiceHeader11.png");
+  /* فقط عکس، بدون فیلتر */
+  background-image: url("/images/ServiceHeader11.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
@@ -91,15 +60,84 @@
 
   padding-right: 8%;
 
-  position: relative;
-  overflow: hidden;
-
   box-shadow:
     0 10px 30px rgba(15, 69, 108, 0.12);
+
+  isolation: isolate;
 }
 
 
-/* عنوان هدر */
+/* =========================
+   لایه آبی روی عکس
+========================= */
+
+.ServiceHeader::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  /*
+    سمت چپ کاملاً شفاف
+    سمت راست آبی و تیره
+  */
+  background: linear-gradient(
+    to left,
+    rgba(2, 43, 79, 0.90) 0%,
+    rgba(3, 52, 91, 0.75) 18%,
+    rgba(5, 65, 105, 0.48) 38%,
+    rgba(8, 76, 119, 0.22) 55%,
+    rgba(8, 76, 119, 0.06) 72%,
+    rgba(8, 76, 119, 0) 100%
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   عنوان
+========================= */
+
+.ServiceHeader h3 {
+  position: relative;
+  z-index: 2;
+
+  color: #ffffff;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  margin: 0;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* خط زیر عنوان */
+
+.ServiceHeader h3::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: -18px;
+
+  width: 95px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    to left,
+    #26b8ed,
+    #8bdcf8
+  );
+}/* عنوان هدر */
 
 .ServiceHeader h3 {
   color: #ffffff;
@@ -140,22 +178,23 @@
 
 
 /* =========================
-   Grid
+   Services Grid
 ========================= */
+
 .servicesGrid {
   width: min(960px, 100%);
+
   margin: 45px auto 0;
 
   display: grid;
 
-  /* دو ستون */
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  /* فاصله بین کارت‌ها */
   column-gap: 30px;
   row-gap: 22px;
 
   position: relative;
+
   z-index: 2;
 }
 
@@ -179,20 +218,30 @@
 
   text-decoration: none;
 
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.94);
 
   border-radius: 24px;
 
-  border: 1px solid #edf3f7;
+  border: 1px solid rgba(226, 239, 247, 0.9);
 
   box-shadow:
     0 8px 25px rgba(38, 92, 125, 0.10);
 
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 
   overflow: hidden;
+
+  /* برای ::before ضروری است */
+  position: relative;
 }
-/* نوار ظریف کنار کارت */
+
+
+/* =========================
+   نوار آبی کنار کارت
+========================= */
 
 .servicesItem::before {
   content: "";
@@ -219,7 +268,9 @@
 }
 
 
-/* Hover */
+/* =========================
+   Hover
+========================= */
 
 .servicesItem:hover {
   transform: translateY(-7px);
@@ -249,12 +300,11 @@
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff,
-      #f3faff
-    );
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f3faff
+  );
 
   display: flex;
   align-items: center;
@@ -283,8 +333,6 @@
   transition: transform 0.35s ease;
 }
 
-
-/* Hover تصویر */
 
 .servicesItem:hover .iconBox {
   transform: scale(1.04);
@@ -322,6 +370,8 @@
   font-weight: 800;
 
   line-height: 1.7;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -360,8 +410,7 @@
     #8bdaf5
   );
 
-  transition:
-    width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 
@@ -370,15 +419,21 @@
 }
 
 
-/* =========================
+/* =====================================================
    Tablet
-========================= */
+===================================================== */
 
 @media (max-width: 900px) {
 
   .backService {
-    padding: 15px 18px 60px;
+    padding: 15px 18px 70px;
+
+    /*
+      روی تبلت عکس همچنان از پایین دیده شود
+    */
+    background-position: center bottom;
   }
+
 
   .ServiceHeader {
     height: 180px;
@@ -386,35 +441,73 @@
     padding-right: 7%;
   }
 
+
   .ServiceHeader h3 {
     font-size: 34px;
   }
 
+
+  /*
+    هنوز دو ستون
+    تا فضای صفحه بهتر استفاده شود
+  */
   .servicesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    max-width: 700px;
-
-    gap: 20px;
+    gap: 18px;
 
     margin-top: 35px;
   }
 
+
   .servicesItem {
-    min-height: 200px;
+    min-height: 205px;
+
+    padding: 20px;
+
+    gap: 18px;
+  }
+
+
+  .iconBox {
+    width: 110px;
+    height: 110px;
+
+    min-width: 110px;
+  }
+
+
+  .iconBox img {
+    width: 85px;
+    height: 85px;
+  }
+
+
+  .serviceContent h3 {
+    font-size: 19px;
+  }
+
+
+  .serviceContent p {
+    font-size: 13px;
+
+    line-height: 1.9;
   }
 }
 
 
-/* =========================
+/* =====================================================
    Mobile
-========================= */
+===================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .backService {
-    padding: 12px 12px 50px;
+    padding: 12px 12px 55px;
+
+    background-position: center bottom;
   }
+
 
   .ServiceHeader {
     height: 150px;
@@ -424,9 +517,11 @@
     padding-right: 8%;
   }
 
+
   .ServiceHeader h3 {
     font-size: 28px;
   }
+
 
   .ServiceHeader h3::after {
     width: 65px;
@@ -436,7 +531,12 @@
   }
 
 
+  /*
+    موبایل یک ستون
+  */
   .servicesGrid {
+    grid-template-columns: 1fr;
+
     margin-top: 25px;
 
     gap: 16px;
@@ -491,13 +591,12 @@
 
     margin-top: 10px;
   }
-
 }
 
 
-/* =========================
+/* =====================================================
    Small Mobile
-========================= */
+===================================================== */
 
 @media (max-width: 400px) {
 
@@ -531,5 +630,4 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 }
