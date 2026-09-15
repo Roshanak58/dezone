@@ -55,11 +55,48 @@ margin: auto;
     /* direction: ltr; */
     /* margin-left: 25px; */
     display: flex;
-    width: 15%;
+    width: 20%;
     left: 10px;
     /* justify-content: space-between; */
     gap: 15px;
-    font-size:14px;
+    font-size:18px;
+}
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.flagContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.flagTooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 50%;
+  transform: translateX(50%);
+
+  background: #163659;
+  color: white;
+
+  padding: 5px 10px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+
+  z-index: 1000;
+}
+
+.flagContainer:hover .flagTooltip {
+  opacity: 1;
+  visibility: visible;
 }
 .mobileHeader {
   display: none;

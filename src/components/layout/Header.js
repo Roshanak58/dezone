@@ -47,9 +47,47 @@ function Header() {
           <Navbar />
         </div>
         <div className={styles.leftSection}>
-          <div className="lang">
-            <Link href="/">En</Link>/<Link href="/">fa</Link>
-          </div>
+          {/* <div className={styles.lang}>
+          
+              <Image src="/images/ir.png" width="30" height="30" alt="فارسی" />
+              <span className={styles.flagTooltipf}>فارسی</span>
+             
+              <Image
+                src="/images/en.png"
+                width="30"
+                height="30"
+                alt="Engilsh"
+              />
+              <span className={styles.flagTooltipe}>English</span>
+              
+          </div> */}
+          <div className={styles.languageSwitcher}>
+
+  <div className={styles.flagContainer}>
+    <Link href="/fa">
+      <Image
+        src="/images/ir.png"
+        alt="فارسی"
+        width={35}
+        height={35}
+      />
+    </Link>
+    <span className={styles.flagTooltip}>فارسی</span>
+  </div>
+
+  <div className={styles.flagContainer}>
+    <Link href="/en">
+      <Image
+        src="/images/en.png"
+        alt="English"
+        width={35}
+        height={35}
+      />
+    </Link>
+    <span className={styles.flagTooltip}>English</span>
+  </div>
+
+</div>
 
           <div>
             {status === "authenticated" ? (

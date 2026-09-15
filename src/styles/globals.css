@@ -334,6 +334,7 @@ section {
   gap: 12px; /* فاصله بین زبان و ورود */
   align-items: center;
 }
+
 .aboutTitle {
   width: 100%;
   height: 200px;
