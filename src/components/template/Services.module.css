@@ -196,6 +196,8 @@
   position: relative;
 
   z-index: 2;
+
+  align-items: center !important;
 }
 
 

@@ -1,41 +1,47 @@
 .header {
+ 
   width: 100%;
   min-height: 110px;
   position: relative;
   direction: rtl;
 }
-
+.headerUp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .centerSection {
   
 
- width: 90%;
+ width: 70%;
   height: 90px;
 
-  background-image: url('/images/headerbackC.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 70px;
+ 
 
   display: flex;
   justify-content: center;
   align-items: center;
 margin: auto;
-  /* background-image: url('/images/headerback1.png');
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
+
 .alignHeader{
   display: flex;
 }
 .rightSection {
-  display: flex;
+  justify-content: center;
+ width: 15%;
   align-items: center;
   gap: 0;
     flex-wrap: nowrap;     /* جلوگیری از رفتن به خط بعد */
 }
+.rh3{
+  flex-wrap: nowrap !important;
+  font-size: 14px;
+}
 .rightSection img {
   flex-shrink: 0;
+  margin-right: 20%;
+ 
 }
 .siteInfo {
   min-width: 0;
@@ -48,8 +54,12 @@ margin: auto;
 .leftSection{
     /* direction: ltr; */
     /* margin-left: 25px; */
+    display: flex;
+    width: 15%;
     left: 10px;
-    font-size: small;
+    /* justify-content: space-between; */
+    gap: 15px;
+    font-size:14px;
 }
 .mobileHeader {
   display: none;
@@ -71,23 +81,26 @@ margin: auto;
         height: 90px;
  }
 .rightSection {
-  display: flex;
+  /* display: flex; */
+  width: 30%;
   align-items: center;
   gap: 5px;
     flex-wrap: nowrap;     /* جلوگیری از رفتن به خط بعد */
 }
 .rightSection img {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+   width: 30px;
+  height: 30px;
 }
 .siteInfo {
   font-size: x-small;
 }
 .leftSection{
+  display: flex;
     direction: ltr;
     padding-left: 5px;
-    font-size: x-small;
+    font-size: 14px;
+    
 } 
 .centerSection {
   justify-content: flex-start;
@@ -146,11 +159,20 @@ display: flex;
     margin: 2px 0;
     direction: ltr;
   }
+  .rightSection img{
+     width: 30px;
+  height: 30px;
+  }
  
   .mobileLeft {
     
     display: flex;
     align-items:center;
+  }
+  .rh3{
+    font-size: 14px;
+    visibility: visible;
+    flex-wrap: nowrap;
   }
 }
 

@@ -12,29 +12,53 @@ export default function Home() {
     if (status === "authenticated") router.replace("/dashboard");
   }, [status]);
   const services = [
+    // {
+    //   title: "تامین تجهیزات",
+    //   desc: "تامین تجهیزات با کیفیت از برندهای معتبر جهانی",
+    //   icon: "/images/supplyer.png",
+    //   link: "/supplier",
+    // },
+    // {
+    //   title: "تصفیه آب",
+    //   desc: "راهکارهای نوین برای تصفیه آب شرب و صنعتی",
+    //   icon: "/images/waterTr.png",
+    //   link: "/services/waterpurification",
+    // },
+    // {
+    //   title: "تصفیه فاضلاب",
+    //   desc: "طراحی و اجرای سیستم‌های تصفیه فاضلاب شهری و صنعتی",
+    //   icon: "/images/wasteWT.png",
+    //   link: "/services/wastewatertreatment",
+    // },
+    // {
+    //   title: "خدمات و پشتیبانی",
+    //   desc: "ارائه خدمات مهندسی و پشتیبانی در تمامی مراحل پروژه",
+    //   icon: "/images/afterSales.png",
+    //   link: "/services/afterSale",
+    // },
     {
-      title: "تامین تجهیزات",
-      desc: "تامین تجهیزات با کیفیت از برندهای معتبر جهانی",
-      icon: "/images/supplyer.png",
-      link: "/supplier",
+      title: "درباره ما",
+      desc: "تجربه، دانش مهندسی و فناوری روز در مسیر توسعه راهکارهای پایدار آب و فاضلاب",
+      icon: "/images/aboutus.png",
+      link: "/aboutus",
     },
     {
-      title: "تصفیه آب",
-      desc: "راهکارهای نوین برای تصفیه آب شرب و صنعتی",
-      icon: "/images/waterTr.png",
-      link: "/services/waterpurification",
+      title: "خدمات ما",
+      desc: "طراحی، ساخت و تأمین تجهیزات تصفیه‌خانه‌های آب و فاضلاب شهری و صنعتی",
+      icon: "/images/ourservices1.png",
+      link: "/services",
     },
     {
-      title: "تصفیه فاضلاب",
-      desc: "طراحی و اجرای سیستم‌های تصفیه فاضلاب شهری و صنعتی",
-      icon: "/images/wasteWT.png",
-      link: "/services/wastewatertreatment",
+      title: "پروژه ها",
+      desc: "مروری بر پروژه‌های اجراشده و راهکارهای مهندسی ما در حوزه آب و فاضلاب",
+      icon: "/images/projectt.png",
+      link: "/projects",
     },
     {
-      title: "خدمات و پشتیبانی",
-      desc: "ارائه خدمات مهندسی و پشتیبانی در تمامی مراحل پروژه",
-      icon: "/images/afterSales.png",
-      link: "/services/afterSale",
+      title: "تماس با ما",
+      desc: "برای دریافت مشاوره، استعلام و بررسی راهکارهای مناسب پروژه خود با ما در تماس باشید",
+      icon: "/images/callus.png",
+      link: "/contactus",
     },
   ];
   return (
@@ -60,17 +84,20 @@ export default function Home() {
         />
 
         <div className="corner-cover">
+          {/* <span className="eng-title">Dezone Engineering Company</span> */}
           <div>
-            <span className="eng-title">Dezone Engineering Company</span>
-
             {/* <p className="eng-subtitle">
             Municipal Utilities, Water & Wastewater Treatment
           </p> */}
 
             <h2 className="corner-coverH2">راهکارهای مهندسی </h2>
-            <h2 className="corner-coverH2">بـرای آب پـاک و پایـدار</h2>
-            <h3 className="corner-coverH3">طراحی، ساخت و تأمین قطعات و تجهیزات پروژه های آب </h3>
-            <h3 className="corner-coverH3">و فاضلاب با فناوری روز دنیا</h3>
+            <h2 className="corner-coverH2">بـرای تأمین آب پـاک و پایـدار</h2>
+            <div className="corner-coverH3radius">
+              <h3 className="corner-coverH3">
+                طراحی و ساخت تصفیه خانه های آب و فاضلاب شهری و صنعتی{" "}
+              </h3>
+              <h3 className="corner-coverH3">مطابق با فناوری روز دنیا</h3>
+            </div>
           </div>
           {/* <div className="LinkSection">
             <Link href="/projects" className="LinkStyle">

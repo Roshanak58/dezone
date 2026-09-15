@@ -5,7 +5,6 @@ import { MdWaterDrop } from "react-icons/md";
 import { MdConstruction } from "react-icons/md";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
-import { FiLogOut } from "react-icons/fi";
 import { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 
@@ -69,30 +68,7 @@ function Navbar() {
               تماس با ما{" "}
             </Link>
           </li>
-          <li>   </li>
-          <li>   </li>
-          <li>   </li>
-          <li>
-            <div className="lang">
-              <Link href="/">En</Link>/<Link href="/">fa</Link>
-            </div>
-          </li>
-          <li>
-            <div>
-              {status === "authenticated" ? (
-                <div>
-                  <button className="buttonClass" onClick={logoutHandler}>
-                    <FiLogOut />
-                    <span className="overlayText">خروج</span>{" "}
-                  </button>
-                </div>
-              ) : (
-                <Link href="/signin">
-                  <h4>ورود</h4>
-                </Link>
-              )}
-            </div>
-          </li>
+          
         </ul>
       </nav>
       <div className="hamburger" onClick={() => setOpen(!open)}>

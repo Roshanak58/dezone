@@ -33,11 +33,42 @@ function Header() {
     //   </div>
     // </header>
     <header className={styles.header}>
-      <div className={styles.centerSection}>
-        <Navbar />
+      <div className={styles.headerUp}>
+        <div class={styles.rightSection}>
+          <div>
+            <Image src="/images/dezon.jpg" width="40" height="40" alt="Logo" />
+          </div>
+
+          <div>
+            <h3 className={styles.rh3}>شرکت مهندسی دزون</h3>
+          </div>
+        </div>
+        <div className={styles.centerSection}>
+          <Navbar />
+        </div>
+        <div className={styles.leftSection}>
+          <div className="lang">
+            <Link href="/">En</Link>/<Link href="/">fa</Link>
+          </div>
+
+          <div>
+            {status === "authenticated" ? (
+              <div>
+                <button className="buttonClass" onClick={logoutHandler}>
+                  <FiLogOut />
+                  <span className="overlayText">خروج</span>{" "}
+                </button>
+              </div>
+            ) : (
+              <Link href="/signin">
+                <h4>ورود</h4>
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
       <div className={styles.Breadcrumb}>
-        <Breadcrumb/>
+        <Breadcrumb />
       </div>
     </header>
   );
