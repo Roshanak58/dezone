@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 import { TiHomeOutline } from "react-icons/ti";
@@ -5,72 +7,82 @@ import { MdWaterDrop } from "react-icons/md";
 import { MdConstruction } from "react-icons/md";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
-import { useState } from "react";
-import { signOut, useSession } from "next-auth/react";
+// import { signOut, useSession } from "next-auth/react";
 
-function Navbar() {
-  const { status } = useSession();
-  const logoutHandler = () => {
-    signOut();
-  };
+function Navbar({ locale }) {
+
   const [open, setOpen] = useState(false);
   return (
     <div className="navbarWrapper">
-      {/* <nav className="navbar"> */}
       <nav className={`navbar ${open ? "open" : ""}`}>
         <ul className={`menu ${open ? "open" : ""}`}>
+          {/* خانه */}
           <li>
             <TiHomeOutline />
-            <Link className="fontLink" href="/" onClick={() => setOpen(!open)}>
-              خانه
+            <Link
+              className="fontLink"
+              href={locale === "fa" ? "/" : "/en"}
+              // href={locale === "fa" ? "/fa" : "/en"}
+              onClick={() => setOpen(false)}
+            >
+              {locale === "fa" ? "خانه" : "Home"}
             </Link>
           </li>
+
+          {/* درباره ما */}
           <li>
             <FaPeopleRoof />
             <Link
               className="fontLink"
-              href="/aboutus"
-              onClick={() => setOpen(!open)}
+              href={locale === "fa" ? "/aboutus" : "/en/aboutus"}
+              // href={locale === "fa" ? "/fa/aboutus" : "/en/aboutus"}
+              onClick={() => setOpen(false)}
             >
-              درباره ما{" "}
+              {locale === "fa" ? "درباره ما" : "About Us"}
             </Link>
           </li>
 
+          {/* خدمات */}
           <li>
             <MdWaterDrop />
             <Link
               className="fontLink"
-              href="/services"
-              onClick={() => setOpen(!open)}
+              href={locale === "fa" ? "/services" : "/en/services"}
+              // href={locale === "fa" ? "/fa/services" : "/en/services"}
+              onClick={() => setOpen(false)}
             >
-              خدمات ما{" "}
+              {locale === "fa" ? "خدمات ما" : "Our Services"}
             </Link>
           </li>
 
+          {/* پروژه ها */}
           <li>
             <MdConstruction />
             <Link
               className="fontLink"
-              href="/projects"
-              onClick={() => setOpen(!open)}
+              href={locale === "fa" ? "/projects" : "/en/projects"}
+              // href={locale === "fa" ? "/fa/projects" : "/en/projects"}
+              onClick={() => setOpen(false)}
             >
-              پروژه ها{" "}
+              {locale === "fa" ? "پروژه ها" : "Projects"}
             </Link>
           </li>
 
+          {/* تماس با ما */}
           <li>
             <IoCallOutline />
             <Link
               className="fontLink"
-              href="/contactus"
-              onClick={() => setOpen(!open)}
+              href={locale === "fa" ? "/contactus" : "/en/contactus"}
+              // href={locale === "fa" ? "/fa/contactus" : "/en/contactus"}
+              onClick={() => setOpen(false)}
             >
-              تماس با ما{" "}
+              {locale === "fa" ? "تماس با ما" : "Contact Us"}
             </Link>
           </li>
-          
         </ul>
       </nav>
+
       <div className="hamburger" onClick={() => setOpen(!open)}>
         <span></span>
         <span></span>

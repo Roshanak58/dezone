@@ -18,17 +18,47 @@
 }
 .desc h3 {
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 .desc p{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
+.ENdesc{
+    
+     font-size: 0.8rem;
+    direction: ltr;
+    align-items: first baseline;
+    margin-left: 5px;
+    text-align: center;
+}
+.ENdesc p{
+    margin-right: 20%;
+}
+
 .leftSec{
     font-size: 0.8rem;
     direction: ltr;
     align-items: first baseline;
     margin-left: 5px;
+    text-align: center;
+}
+.leftSec p{
+    margin-left: 20%;
+    
+}
+.leftSec img{
+    margin-left: 20%;
+}
+.ENleftSec{
+    width: 50%;  
+    font-family:sans-serif;
+    font-size: 0.8;
+   font-size: 0.8rem;
+    direction: ltr;
+    align-items: first baseline;
+    margin-left: 5px;
+    text-align: left;
 }
 
 @media (max-width: 768px) {

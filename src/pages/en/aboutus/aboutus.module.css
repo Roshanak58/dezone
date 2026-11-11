@@ -1,0 +1,199 @@
+.aboutTitle {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 6 / 1;
+  border-radius: 20px;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(8, 32, 55, 0.82) 0%,
+      rgba(8, 32, 55, 0.58) 22%,
+      rgba(8, 32, 55, 0.22) 45%,
+      transparent 72%
+    ),
+    url('/images/aboutback.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-left: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* عنوان */
+.aboutTitle h3 {
+   direction: ltr;
+  text-align: left;
+
+  display: inline-block;
+
+  margin-left: 20px;
+  margin-right: auto;
+
+  padding-top: 100px;
+  padding-bottom: 8px;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+
+  /* حذف هر خطی که از CSSهای دیگر آمده */
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* حذف pseudo-element های قبلی */
+.aboutTitle::before,
+.aboutTitle::after {
+  content: none !important;
+}
+
+
+/* فقط یک خط زیر عنوان */
+.aboutTitle h3::before {
+  content: none !important;
+}
+
+.aboutTitle h3::after {
+  content: "";
+  display: block;
+
+  width: 75px;
+  height: 3px;
+
+  margin-top: 10px;
+
+  background: linear-gradient(
+    to left,
+    #6cb6de,
+    #ffffff
+  );
+
+  border: none;
+  border-radius: 5px;
+}
+/* .aboutTitle::before {
+    border: none; 
+    height: 2px;
+    background-color: blue; 
+} */
+.aboutus{
+/* font-family: BYekan; */
+
+  color: black;
+  /* margin-top: 10px; */
+  /* margin-right: 10px; */
+   /* background-image: url('/images/backtreat.png');  */
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;  
+  /* background: linear-gradient(
+      135deg,
+      #0B2545 0%,
+      #134E6F 50%,
+      #1D7874 100%
+  ); */
+  height: 1000px;                 
+  /* ارتفاع کل صفحه */
+  width: 100%;
+  direction: ltr;
+  text-align: left;
+  
+
+}
+.aboutusH2{
+  direction: ltr;
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+ /* border-bottom: 3px solid #163659; */
+  padding-bottom: 8px;
+
+}
+.aboutus h3{
+  border-bottom: 3px solid #6cb6de;
+display: inline-block;
+padding-bottom: 8px;
+
+  padding-top: 100px;
+  margin-left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  
+  color: #fafafb;
+}
+.wordContent {
+  direction: ltr !important;
+  text-align: left;
+  line-height: 2;
+  font-family:  sans-serif !important;
+  font-size: 17px;
+  margin-left: 30px;
+}
+
+.wordContent h1,
+.wordContent h2,
+.wordContent h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.wordContent p {
+  margin-bottom: 15px;
+}
+
+.wordContent ul,
+.wordContent ol {
+  padding-right: 30px;
+}
+.pdfContainer {
+  /* width: 100%;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden; */
+  margin-top: 0;
+  margin-bottom: 5px;
+  height: auto !important;
+max-height: none !important;
+overflow: visible !important;
+}
+
+.pdfViewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-color: #e2e8ef;
+}
+.pdfContainer {
+  /* width: 100%;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden; */
+  margin-top: 0;
+  margin-bottom: 5px;
+  height: auto !important;
+max-height: none !important;
+overflow: visible !important;
+}
+@media (max-width: 992px) {
+    
+}

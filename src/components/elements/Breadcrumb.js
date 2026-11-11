@@ -9,36 +9,42 @@ function Breadcrumb() {
 
   // const parts = pathname.split("/").filter(Boolean);
   const parts = pathname?.split("/").filter(Boolean) || [];
+  // تشخیص زبان
+  const isEnglish = parts[0] === "en";
+  // حذف en از مسیر Breadcrumb
+  if (isEnglish) {
+    parts.shift();
+  }
 
   const titles = {
-    "aboutus": "درباره ما",
-    "contactus": "تماس با ما",
-    "projects": "پروژه ها",
-    "blog": "وبلاگ",
-    "services": "خدمات",
-    "urbanWasteWater":"تصفیه فاضلاب شهری",
-    "IndustrialWastewater":"تصفیه فاضلاب صنعتی",
-    "IndustrialWaterTreatment":"تصفیه آب های صنعتی",
-    "DrinkingWaterPurification":"تصفیه آب آشامیدنی",
-    "supplier":"تأمین قطعات",
-    "info":" ",
-    "QC":" ",
-    "ranking":" ",
-    "activity":" ",
-    "qualification":" ",
-    "engineerS":" ",
-    "wstreatment":" ",
-    "wtreatment":" ",
-    "pstation":" ",
-    "operation":" ",
-    "afterSale":" ",
-    "wastewatertreatment":"تصفیه فاضلاب ",
-    "waterpurification":"تصفیه آب",
-    "pictureP":" ",
-    "dashboard":"داشبورد ",
-    "AdminPrpjects":" ",
-    "user":" ",
-    "signin":" ",
+    aboutus: "درباره ما",
+    contactus: "تماس با ما",
+    projects: "پروژه ها",
+    blog: "وبلاگ",
+    services: "خدمات",
+    MunicipalWastewater: "تصفیه فاضلاب شهری",
+    IndustrialWastewater: "تصفیه فاضلاب صنعتی",
+    IndustrialWaterTreatment: "تصفیه آب های صنعتی",
+    DrinkingWaterPurification: "تصفیه آب آشامیدنی",
+    supplier: "تأمین قطعات",
+    info: " ",
+    QC: " ",
+    ranking: " ",
+    activity: " ",
+    qualification: " ",
+    engineerS: " ",
+    wstreatment: " ",
+    wtreatment: " ",
+    pstation: " ",
+    operation: " ",
+    afterSale: " ",
+    wastewatertreatment: "تصفیه فاضلاب ",
+    waterpurification: "تصفیه آب",
+    pictureP: " ",
+    dashboard: "داشبورد ",
+    AdminPrpjects: " ",
+    user: " ",
+    signin: " ",
 
     // ...
   };
@@ -55,20 +61,22 @@ function Breadcrumb() {
 
   return (
     <nav className={styles.breadcrumb}>
-      <Link href="/">خانه</Link>
-
+      <Link href={isEnglish ? "/en" : "/"}>{isEnglish ? "Home" : "خانه"}</Link>
       {parts.map((part, index) => {
-        const href = "/" + parts.slice(0, index + 1).join("/");
-
-        const title =
-          titles[part] ??
-          titles[part.toLowerCase()] ??
-          decodeURIComponent(part);
-
+        // ساخت مسیر صحیح برای زبان فعلی
+        const href =
+          (isEnglish ? "/en" : "") + "/" + parts.slice(0, index + 1).join("/");
+        // فارسی: ترجمه از titles // انگلیسی: بدون ترجمه، خود نام مسیر
+        const title = isEnglish
+          ? decodeURIComponent(part)
+          : (titles[part] ??
+            titles[part.toLowerCase()] ??
+            decodeURIComponent(part));
         return (
           <span key={href}>
-            <span className={styles.sep}> / </span>
-            <Link href={href}>{title}</Link>
+            {" "}
+            <span className={styles.sep}> / </span>{" "}
+            <Link href={href}>{title}</Link>{" "}
           </span>
         );
       })}

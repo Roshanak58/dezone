@@ -6,7 +6,7 @@ function Index() {
   const router = useRouter();
   const type = router.query.name;
   let nameType = "";
-  if (type === "urbanWasteWater") {
+  if (type === "MunicipalWastewater") {
     nameType = "تصفیه فاضلاب شهری";
   }
    if (type === "IndustrialWastewater") {
@@ -17,7 +17,7 @@ function Index() {
       <div className={styles.infoHeader}>
         <h3>{nameType} </h3>
       </div>
-      {type === "urbanWasteWater" && (
+      {type === "MunicipalWastewater" && (
         <div className={styles.picbackg}>
           {/* <div className={styles.pageHeight}> */}
             <div className={styles.textServices}>

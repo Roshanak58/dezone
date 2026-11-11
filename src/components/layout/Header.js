@@ -6,105 +6,97 @@ import Breadcrumb from "../elements/Breadcrumb";
 import Navbar from "@/components/elements/Navbar";
 import styles from "./Header.module.css";
 import { signOut, useSession } from "next-auth/react";
-function Header() {
+import { useRouter } from "next/router";
+
+function Header({ locale, changeLanguage }) {
   const { status } = useSession();
+  
+
+  const isEnglish = locale === "en";
+
+  const name = isEnglish
+    ? "Dezone Engineering Company"
+    : "شرکت مهندسی دزون";
+
+  const logi = isEnglish ? "Login" : "ورود";
+
+  const logoutText = isEnglish ? "Logout" : "خروج";
+
   const logoutHandler = () => {
     signOut();
   };
+
   return (
-    // <header className={styles.header}>
-    //   <div className={styles.alignHeader}>
-    //     <div className={styles.centerSection}>
-    //       <Navbar />
-    //     </div>
-    //     <div className={styles.leftSection}>
-    //       <Image src="/images/dezone2.png" width="70" height="50" alt="Logo" />
-
-    //     </div>
-
-    //     <div className={styles.mobileHeader}>
-    //       <div className={styles.mobileLeft}>
-    //         <Navbar />
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className={styles.Breadcrumb}>
-    //     <Breadcrumb />
-    //   </div>
-    // </header>
     <header className={styles.header}>
       <div className={styles.headerUp}>
-        <div class={styles.rightSection}>
+        <div className={styles.rightSection}>
           <div>
-            <Image src="/images/dezon.jpg" width="40" height="40" alt="Logo" />
+            <Image
+              src="/images/dezon.jpg"
+              width={40}
+              height={40}
+              alt="Logo"
+            />
           </div>
 
           <div>
-            <h3 className={styles.rh3}>شرکت مهندسی دزون</h3>
+            <h3 className={styles.rh3}>{name}</h3>
           </div>
         </div>
+
         <div className={styles.centerSection}>
-          <Navbar />
+          <Navbar locale={locale} />
         </div>
+
         <div className={styles.leftSection}>
-          {/* <div className={styles.lang}>
-          
-              <Image src="/images/ir.png" width="30" height="30" alt="فارسی" />
-              <span className={styles.flagTooltipf}>فارسی</span>
-             
-              <Image
-                src="/images/en.png"
-                width="30"
-                height="30"
-                alt="Engilsh"
-              />
-              <span className={styles.flagTooltipe}>English</span>
-              
-          </div> */}
           <div className={styles.languageSwitcher}>
+            <div className={styles.flagContainer}>
+              <button onClick={() => changeLanguage("fa")}>
+                <Image
+                  src="/images/ir.png"
+                  alt="فارسی"
+                  width={35}
+                  height={35}
+                />
+              </button>
+              <span className={styles.flagTooltip}>فارسی</span>
+            </div>
 
-  <div className={styles.flagContainer}>
-    <Link href="/fa">
-      <Image
-        src="/images/ir.png"
-        alt="فارسی"
-        width={35}
-        height={35}
-      />
-    </Link>
-    <span className={styles.flagTooltip}>فارسی</span>
-  </div>
-
-  <div className={styles.flagContainer}>
-    <Link href="/en">
-      <Image
-        src="/images/en.png"
-        alt="English"
-        width={35}
-        height={35}
-      />
-    </Link>
-    <span className={styles.flagTooltip}>English</span>
-  </div>
-
-</div>
+            <div className={styles.flagContainer}>
+              <button onClick={() => changeLanguage("en")}>
+                <Image
+                  src="/images/en.png"
+                  alt="English"
+                  width={35}
+                  height={35}
+                />
+              </button>
+              <span className={styles.flagTooltip}>English</span>
+            </div>
+          </div>
 
           <div>
             {status === "authenticated" ? (
               <div>
-                <button className="buttonClass" onClick={logoutHandler}>
+                <button
+                  className="buttonClass"
+                  onClick={logoutHandler}
+                >
                   <FiLogOut />
-                  <span className="overlayText">خروج</span>{" "}
+                  <span className="overlayText">
+                    {logoutText}
+                  </span>
                 </button>
               </div>
             ) : (
-              <Link href="/signin">
-                <h4>ورود</h4>
+              <Link href={isEnglish ? "/en/signin" : "/signin"}>
+                <h4>{logi}</h4>
               </Link>
             )}
           </div>
         </div>
       </div>
+
       <div className={styles.Breadcrumb}>
         <Breadcrumb />
       </div>

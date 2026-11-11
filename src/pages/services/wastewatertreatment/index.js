@@ -25,7 +25,7 @@ function Wastewatertreatment() {
       </p>
       <div className={styles.balanceItem}>
         <div >
-          <Link href="/services/wastewatertreatment/urbanWasteWater">
+          <Link href="/services/wastewatertreatment/MunicipalWastewater">
           <Image
             className={styles.imgBorder}
             src="/images/urbanwastewater.png"

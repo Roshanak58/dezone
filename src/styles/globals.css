@@ -142,6 +142,7 @@ button,input,textarea{
 
   border-radius: 30px;
 }
+
 .corner-coverH3{
   color: #fff;
   /* color:  #d9f0f2; */
@@ -151,6 +152,10 @@ button,input,textarea{
   
 }
 
+ .corner-coverH3radius:hover {
+  border-radius: 20px;
+  background-color: #11172da8;
+}
 .eng-title{
   display:inline-block;
   background:#0d4c92;
@@ -270,7 +275,21 @@ section {
 .navbar {
   width: 100%;
 }
+.site-fa .navbar {
+  direction: rtl;
+}
 
+.site-en .navbar {
+  direction: ltr;
+}
+.site-en header {
+  direction: ltr;
+  text-align: left;
+}
+.site-en .services-grid{
+  direction: ltr;
+  text-align: left;
+}
 .menu {
   width: 100%;
   display: flex;
@@ -578,12 +597,12 @@ padding-bottom: 8px;
 }
 
 .service-item h3 {
-  font-size: 16px;
+  font-size:1.4rem;
   margin-bottom: 15px;
 }
 
 .service-item p {
-  font-size: 14px;
+  font-size: 1.2rem;
   line-height: 1.8;
   opacity: 0.9;
 }
@@ -592,6 +611,7 @@ padding-bottom: 8px;
 }
 .service-item:hover {
   transform: translateY(-8px);
+   background-color: #111827cf;
 }
 
 @media (max-width: 992px) {

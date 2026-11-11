@@ -13,6 +13,20 @@
   justify-content:center; 
   height: auto;
 }
+.balanceDivEn{
+  /* padding-top:50px;
+  padding-right: 0px;
+  font-size: large;
+  display:flex;
+  align-items: center !important; */
+  margin-left: 20%;
+  /* flex-wrap: wrap;       
+  gap:50px !important;             
+  justify-content:center;  */
+  border-radius: 20px;
+  height: auto;
+  width: 100%;
+}
 .service {
   position: relative;
   /* width: 120px; */
@@ -58,6 +72,11 @@
 .service:active .overlayText,
 .service:focus .overlayText {
   opacity: 1;
+}
+.service:hover .serviceP,
+.service:active .serviceP,
+.service:focus .serviceP {
+  opacity: 0;
 }
 
 .service:hover .serviceImg,

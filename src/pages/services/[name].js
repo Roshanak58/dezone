@@ -13,14 +13,11 @@ function Index({ type, content }) {
 }
 export default Index;
 export async function getStaticProps({ params }) {
+  
   const type = params.name;
 
   const files = {
     engineerS: "engineerS.docx",
-    // urbanWastewater: "urbanWastewater.docx",
-    // industrialWastewater: "industrialWastewater.docx",
-    // industrialWater: "industrialWater.docx",
-    // drinkingWater: "drinkingWater.docx",
     operation: "operation.docx",
     afterSale: "afterSale.docx",
     pstation: "pstation.docx",
@@ -72,26 +69,7 @@ export async function getStaticPaths() {
           name: "pstation",
         },
       },
-      // {
-      //   params: {
-      //     name: "urbanWastewater",
-      //   },
-      // },
-      // {
-      //   params: {
-      //     name: "industrialWastewater",
-      //   },
-      // },
-      // {
-      //   params: {
-      //     name: "industrialWater",
-      //   },
-      // },
-      // {
-      //   params: {
-      //     name: "drinkingWater",
-      //   },
-      // },
+      
     ],
 
     fallback: false,

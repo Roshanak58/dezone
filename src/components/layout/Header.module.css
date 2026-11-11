@@ -51,27 +51,56 @@ margin: auto;
     direction: ltr;
 }
 
-.leftSection{
-    /* direction: ltr; */
-    /* margin-left: 25px; */
-    display: flex;
-    width: 20%;
-    left: 10px;
-    /* justify-content: space-between; */
-    gap: 15px;
-    font-size:18px;
+.leftSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+  gap: 15px;
+  font-size: 18px;
+  height: 90px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
+
+.leftSection > div {
+  display: flex;
+  align-items: center;
+}
+
 .languageSwitcher {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: nowrap;
 }
+
 .flagContainer {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.flagContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
+.flagContainer button img {
+  display: block;
+  object-fit: contain;
+}
+
+.leftSection h4 {
+  margin: 0;
+  white-space: nowrap;
+}
 .flagTooltip {
   position: absolute;
   top: calc(100% + 8px);

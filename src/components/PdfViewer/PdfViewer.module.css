@@ -1,0 +1,36 @@
+.pdfContainer {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  background: white;
+  margin: 0;
+  padding: 20px 0;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.pdfPages {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.pdfPage {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: white;
+  object-fit: contain;
+}

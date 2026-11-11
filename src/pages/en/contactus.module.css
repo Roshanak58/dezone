@@ -1,0 +1,17 @@
+.ContactHeader{
+   width: 100%;
+  aspect-ratio: 6 / 1;
+  border-radius: 20px;
+   background-image: url('/images/ContactUsE.png');  
+  background-size: 100% 100%;       
+  background-position: center center;  
+  background-repeat: no-repeat; 
+  /* height: 250px; */
+  
+}
+.ContactHeader::after {
+    border: none; /* حذف مرز پیشفرض */
+    height: 2px; /* ارتفاع خط */
+    background-color: blue; /* رنگ خط */
+    margin-top: 5px;
+}
