@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import styles from "./PdfViewer.module.css";
 
 export default function PdfViewer({ pdfUrl }) {
-  console.log("pdfUrl:::",pdfUrl)
   const pdfContainerRef = useRef(null);
 
   useEffect(() => {

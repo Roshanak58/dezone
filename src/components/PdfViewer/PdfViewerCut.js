@@ -3,7 +3,6 @@ import styles from "./PdfViewerCut.module.css";
 
 export default function PdfViewerCut({ pdfUrl }) {
   const pdfContainerRef = useRef(null);
-console.log("pdfUrl::",pdfUrl)
   useEffect(() => {
     let cancelled = false;
     let pdf = null;

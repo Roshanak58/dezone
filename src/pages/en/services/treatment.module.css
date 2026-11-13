@@ -91,6 +91,9 @@
   border-radius: 50%;
   border: 8px solid #0c388d;
 }
+.infoLi{
+  background: none !important;
+}
 .balanceItem {
   padding-top: 5%;
   height: auto;

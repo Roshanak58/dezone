@@ -1,7 +1,7 @@
 import PdfViewerCut from "@/components/PdfViewer/PdfViewerCut";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/pages/services/treatment.module.css";
+import styles from "@/pages/en/services/treatment.module.css";
 function Waterpurification() {
    return (
     <>
@@ -14,7 +14,7 @@ function Waterpurification() {
         </div>
         <div className={styles.balanceItem}>
           <div>
-            <Link href="/en/services/watertreatment/Drinking water treatment">
+            <Link href="/en/services/waterpurification/DrinkingWaterTreatment">
               <Image
                  className={styles.imgBorder}
                 src="/images/waterr.jpg"
@@ -27,7 +27,7 @@ function Waterpurification() {
             </Link>
           </div>
           <div>
-            <Link href="/en/services/watertreatment/Industrial water treatment">
+            <Link href="/en/services/waterpurification/IndustrialWaterTreatment">
               <Image
                 className={styles.imgBorder}
                 src="/images/Industrial.jpg"

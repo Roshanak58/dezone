@@ -17,7 +17,7 @@ function Services() {
   link: "/en/services/wastewatertreatment",
 },
 {
-  title: "Water Treatment",
+  title: "water Purification",
   desc: "Advanced water treatment systems for drinking water, industrial, and agricultural applications",
   icon: "/images/waterr.jpg",
   link: "/en/services/waterpurification",

@@ -1,6 +1,6 @@
 import PdfViewer from "@/components/PdfViewer/PdfViewer";
 import { useRouter } from "next/router";
-import styles from "@/pages/services/treatment.module.css";
+import styles from "@/pages/en/services/treatment.module.css";
 
 function Index() {
   const router = useRouter();
@@ -10,12 +10,12 @@ function Index() {
       <div className={styles.infoHeader}>
         <h3>{type} </h3>
       </div>
-      {type === "MunicipalWastewater" && (
+      {type === "DrinkingWaterTreatment" && (
         <div className={styles.pdfContainer}>
           <PdfViewer pdfUrl="/api/pdf/DrinkingWT.pdf" />
         </div>
       )}
-      {type === "IndustrialWastewater" && (
+      {type === "IndustrialWaterTreatment" && (
         <div className={styles.pdfContainer}>
           <PdfViewer pdfUrl="/api/pdf/IndustrialWT.pdf" />
         </div>
