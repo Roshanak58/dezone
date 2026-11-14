@@ -12,7 +12,7 @@ function ServiceInfo({ type }) {
   if (type === "engineerS") {
     nameType = "Engineering Services";
   }
-  if (type === "operation") {
+  if (type === "Operation") {
     nameType = "Operation and Maintenance";
   }
   if (type === "afterSale") {
