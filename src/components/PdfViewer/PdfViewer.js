@@ -3,7 +3,6 @@ import styles from "./PdfViewer.module.css";
 
 export default function PdfViewer({ pdfUrl }) {
   const pdfContainerRef = useRef(null);
-
   useEffect(() => {
     let cancelled = false;
     let pdf = null;
