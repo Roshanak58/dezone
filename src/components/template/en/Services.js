@@ -32,7 +32,7 @@ function Services() {
   title: "Operation and Maintenance",
   desc: "Specialized operation, maintenance, and repair services for water and wastewater treatment equipment",
   icon: "/images/operation.jpg",
-  link: "/en/services/operation",
+  link: "/en/services/Operation",
 },
 {
   title: "After-Sales Services",
