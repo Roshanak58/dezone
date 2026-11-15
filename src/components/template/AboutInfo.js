@@ -3,6 +3,7 @@ import styles from "./AboutInfo.module.css";
 import { useState } from "react";
 
 function AboutInfo({ type }) {
+  console.log("type:::::",type)
   let nameType = "";
   if (type === "info") {
     nameType = "اطلاعات کلی و حقوقی شرکت مهندسی دزون";

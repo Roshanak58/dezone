@@ -1,5 +1,7 @@
 
-import AboutInfo from "@/components/template/en/AboutInfoEn";
+
+
+import AboutInfo from "@/components/template/AboutInfo";
 import { useRouter } from "next/router";
 
 function Index() {
